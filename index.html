@@ -1775,14 +1775,21 @@ p{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Ar
 .v19-close-hotspot{position:absolute;right:1.1%;top:1.3%;width:5%;height:7%;border:0;background:transparent;cursor:pointer}
 .v19-form-overlay{position:absolute;inset:0;pointer-events:none}
 .v19-form-overlay input:not([type=checkbox]),.v19-stripe-hotspot,.v19-consent{position:absolute;pointer-events:auto;background:transparent;border:0;outline:0}
+.v19-form-overlay label{position:absolute;pointer-events:auto;cursor:text}
 .v19-form-overlay input:not([type=checkbox]){background:#fff;box-sizing:border-box;color:#141414;caret-color:#141414;font-size:18px;font-family:inherit;padding:0 16px}
 .v19-form-overlay input:not([type=checkbox])::placeholder{color:#98a0a8;opacity:1}
 .v19-form-overlay input:not([type=checkbox]):focus{box-shadow:0 0 0 3px rgba(30,115,210,.18);border-radius:8px}
 .v19-stripe-hotspot,.v19-consent{cursor:pointer}
-.v19-first{left:57.1%;top:33.1%;width:18.6%;height:8.4%}
-.v19-last{left:77.0%;top:33.1%;width:18.4%;height:8.4%}
-.v19-email{left:57.1%;top:42.9%;width:38.3%;height:8.3%}
-.v19-phone{left:57.1%;top:52.4%;width:38.3%;height:8.3%}
+/* full visible field box (label text above + value line) - click target only */
+.v19-first-hit{left:57.1%;top:33.1%;width:18.6%;height:8.4%}
+.v19-last-hit{left:77.0%;top:33.1%;width:18.4%;height:8.4%}
+.v19-email-hit{left:57.1%;top:42.9%;width:38.3%;height:8.3%}
+.v19-phone-hit{left:57.1%;top:52.4%;width:38.3%;height:8.3%}
+/* actual input box - just the typed-value line, so it doesn't paint over the label above it or bleed into the field below */
+.v19-first{left:57.1%;top:36.8%;width:18.6%;height:3.6%}
+.v19-last{left:77.0%;top:36.8%;width:18.4%;height:3.6%}
+.v19-email{left:57.1%;top:46.9%;width:38.3%;height:3.7%}
+.v19-phone{left:57.1%;top:56.3%;width:38.3%;height:3.6%}
 .v19-consent{left:57.0%;top:63.5%;width:2.2%;height:3.2%;opacity:.01;cursor:pointer}
 .v19-stripe-hotspot{left:57.0%;top:82.3%;width:38.5%;height:8.6%;cursor:pointer}
 body.v19-modal-open{overflow:hidden}
@@ -2287,10 +2294,14 @@ Every day, they're asking AI who to call.</p>
 <img alt="The No Garbage Real AI Truth Report checkout" class="v19-modal-art" src="assets/asset-08.jpg"/>
 <button aria-label="Close" class="v19-close-hotspot" data-close-modal="" type="button"></button>
 <form aria-label="Checkout contact information" class="v19-form-overlay" id="v19LeadForm">
-<input aria-label="First Name" autocomplete="given-name" class="v19-first" name="first_name" placeholder="John"/>
-<input aria-label="Last Name" autocomplete="family-name" class="v19-last" name="last_name" placeholder="Smith"/>
-<input aria-label="Email Address" autocomplete="email" class="v19-email" name="email" placeholder="you@example.com" required="" type="email"/>
-<input aria-label="Mobile Number" autocomplete="tel" class="v19-phone" name="phone" placeholder="(248) 555-0123" type="tel"/>
+<label class="v19-first-hit" for="v19FirstInput"></label>
+<input aria-label="First Name" autocomplete="given-name" class="v19-first" id="v19FirstInput" name="first_name" placeholder="John"/>
+<label class="v19-last-hit" for="v19LastInput"></label>
+<input aria-label="Last Name" autocomplete="family-name" class="v19-last" id="v19LastInput" name="last_name" placeholder="Smith"/>
+<label class="v19-email-hit" for="v19EmailInput"></label>
+<input aria-label="Email Address" autocomplete="email" class="v19-email" id="v19EmailInput" name="email" placeholder="you@example.com" required="" type="email"/>
+<label class="v19-phone-hit" for="v19PhoneInput"></label>
+<input aria-label="Mobile Number" autocomplete="tel" class="v19-phone" id="v19PhoneInput" name="phone" placeholder="(248) 555-0123" type="tel"/>
 <input aria-label="SMS consent" class="v19-consent" name="sms_consent" type="checkbox" value="yes"/>
 <button aria-label="Continue to secure Stripe checkout" class="v19-stripe-hotspot" type="submit"></button>
 </form>
