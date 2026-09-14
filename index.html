@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>The Real AI Truth Report | Contractors &amp; Small-Business Owners</title>
+<meta content="A source-backed investigation for contractors and small-business owners into how AI is changing who customers find, trust and call." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+ --ink:#090909; --ink2:#121212; --paper:#fff; --warm:#f4f1eb; --soft:#f7f7f5;
+ --red:#d42e2e; --red2:#b91f25; --gray:#686868; --line:#dedbd5; --muted:#aaa;
+ --max:1180px; --copy:760px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.58;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.copy{width:min(var(--copy),calc(100% - 40px));margin:auto}
+section{padding:92px 0}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(52px,8vw,94px);line-height:.91;letter-spacing:-.065em;font-weight:900;margin-bottom:24px}
+h2{font-size:clamp(38px,5.5vw,64px);line-height:.96;letter-spacing:-.052em;font-weight:900;margin-bottom:22px}
+h3{font-size:22px;line-height:1.15;font-weight:900;margin-bottom:10px}
+p{margin-bottom:18px}
+.lead{font-size:clamp(19px,2vw,23px);line-height:1.48;color:#4c4c4c}
+.kicker{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:900;color:var(--red);margin-bottom:14px}
+.red{color:var(--red)}
+.center{text-align:center}
+.small{font-size:13px;color:#707070}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:#c9c9c9}
+.paper{background:var(--warm)}
+.soft{background:var(--soft)}
+.grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px}
+
+/* global purchase controls */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.96);backdrop-filter:blur(12px);border-bottom:1px solid #252525}
+.topbar-in{height:60px;width:min(var(--max),calc(100% - 28px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.topbrand{color:#fff;font-size:13px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbrand span{color:#929292;font-weight:500}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;background:var(--red);color:#fff;border-radius:7px;padding:16px 24px;font-weight:900;line-height:1.08;box-shadow:0 12px 28px rgba(212,46,46,.16);transition:.18s ease}
+.cta:hover{transform:translateY(-2px);background:var(--red2)}
+.cta.big{font-size:18px;padding:19px 28px}
+.cta.black{background:#111}
+.cta.white{background:#fff;color:#111;box-shadow:none}
+.cta.bar{padding:11px 16px;font-size:13px}
+.pricepill{display:inline-flex;padding:5px 8px;background:rgba(255,255,255,.16);border-radius:999px}
+.cta.white .pricepill{background:#eee;color:#111}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:
+ radial-gradient(circle at 75% 20%,rgba(212,46,46,.12),transparent 28%),
+ linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+ #090909;
+ background-size:auto,46px 46px,46px 46px,auto;color:#fff;padding:78px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:68px;align-items:center}
+.hero .lead{color:#d2d2d2;max-width:660px}
+.hero .subhit{font-size:clamp(24px,3vw,34px);font-weight:850;line-height:1.1;letter-spacing:-.035em;margin:0 0 22px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:9px 18px;margin:25px 0 30px}
+.hero-proof span{font-size:13px;color:#c7c7c7}
+.hero-proof span:before{content:"✓";color:var(--red);font-weight:900;margin-right:7px}
+.hero-note{font-size:12px;color:#8f8f8f;margin-top:13px}
+.product-stage{position:relative;min-height:610px;display:grid;place-items:center}
+.folder{position:absolute;width:440px;height:475px;background:#e7e0d5;border-radius:7px;transform:rotate(5deg);box-shadow:0 28px 70px rgba(0,0,0,.4)}
+.folder:before{content:"CASE FILE · 2026-AI";position:absolute;left:24px;top:-28px;background:#e7e0d5;border-radius:6px 6px 0 0;padding:10px 18px;font-size:11px;font-weight:900;letter-spacing:.12em;color:#4a443c}
+.report-cover{position:relative;z-index:3;width:min(405px,88%);aspect-ratio:.72;background:
+ linear-gradient(rgba(255,255,255,.026) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.026) 1px,transparent 1px),
+ #0b0b0b;background-size:31px 31px,31px 31px,auto;border:1px solid #343434;border-radius:13px;padding:31px 28px;box-shadow:0 38px 82px rgba(0,0,0,.48);transform:rotate(-2deg)}
+.stamp{display:inline-block;border:3px solid var(--red);color:var(--red);padding:6px 9px 5px;font-size:11px;font-weight:900;letter-spacing:.15em;transform:rotate(-3deg);margin-bottom:24px}
+.cover-title{font-size:48px;font-weight:900;line-height:.92;letter-spacing:-.055em}
+.cover-title span{display:block;color:var(--red)}
+.cover-sub{margin-top:17px;color:#c8c8c8;font-size:14px;max-width:270px}
+.cover-meta{position:absolute;left:28px;right:28px;bottom:27px;border-top:1px solid #2c2c2c;padding-top:14px;color:#929292;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.evidence-tag{position:absolute;z-index:6;background:#fff;color:#111;padding:13px 15px;border-radius:5px;box-shadow:0 15px 35px rgba(0,0,0,.3);font-size:12px;font-weight:800}
+.evidence-tag.one{right:-5px;top:65px;transform:rotate(4deg)}
+.evidence-tag.two{left:-10px;bottom:68px;transform:rotate(-4deg)}
+.evidence-tag b{display:block;color:var(--red);font-size:22px;line-height:1}
+
+/* opening receipt strip */
+.receipt-strip{padding:0;background:#fff;border-bottom:1px solid var(--line)}
+.receipt-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.receipt{padding:24px;border-right:1px solid var(--line)}
+.receipt:last-child{border-right:0}
+.receipt b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.receipt span{font-size:14px;color:#555}
+
+/* missing customer */
+.missing-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.ai-screen{background:#0d0d0d;color:#fff;border-radius:14px;border:1px solid #2a2a2a;box-shadow:0 22px 54px rgba(0,0,0,.18);overflow:hidden}
+.ai-top{height:46px;border-bottom:1px solid #292929;display:flex;align-items:center;padding:0 16px;gap:7px;color:#777;font-size:11px}
+.dot{width:8px;height:8px;border-radius:50%;background:#444}
+.ai-body{padding:28px}
+.userq{background:#1a1a1a;border:1px solid #2c2c2c;padding:14px 16px;border-radius:12px;margin-bottom:22px;color:#eee;font-size:14px}
+.ai-answer{font-size:14px;color:#d7d7d7;line-height:1.55}
+.ai-answer strong{color:#fff}
+.not-you{margin-top:22px;border:2px solid var(--red);color:#fff;padding:14px;font-weight:900;text-align:center;letter-spacing:.04em}
+.missing-copy h2 .line2{display:block;color:var(--red)}
+.micro-loss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.micro-loss div{border-top:3px solid #111;padding-top:11px;font-size:13px;font-weight:800}
+
+/* evidence numbers */
+.numbers{background:#0a0a0a;color:#fff}
+.number-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.number{border:1px solid #2b2b2b;background:#111;padding:30px;border-radius:10px;position:relative;overflow:hidden}
+.number:before{content:"EVIDENCE";position:absolute;right:-16px;top:18px;transform:rotate(90deg);font-size:9px;letter-spacing:.18em;color:#555;font-weight:900}
+.num{font-size:clamp(58px,7vw,84px);font-weight:900;line-height:.88;letter-spacing:-.065em;color:var(--red);margin-bottom:15px}
+.number p{font-size:15px;color:#eee;margin-bottom:7px}
+.number small{color:#777}
+.receipts-line{margin-top:26px;font-size:14px;color:#bdbdbd;text-align:center}
+
+/* report preview */
+.preview-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:end;margin-bottom:36px}
+.preview-note{border-left:4px solid var(--red);padding:8px 0 8px 18px;color:#555}
+.preview-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:110px;gap:16px}
+.panel{border-radius:9px;overflow:hidden;position:relative;padding:22px;box-shadow:0 15px 36px rgba(0,0,0,.08)}
+.panel.darkp{background:
+ linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px),
+ #0b0b0b;background-size:28px 28px,28px 28px,auto;color:#fff;border:1px solid #292929}
+.panel.paperp{background:#f0ebe2;border:1px solid #ddd4c7}
+.panel.whitep{background:#fff;border:1px solid var(--line)}
+.panel.a{grid-column:span 5;grid-row:span 3}
+.panel.b{grid-column:span 7;grid-row:span 2}
+.panel.c{grid-column:span 4;grid-row:span 2}
+.panel.d{grid-column:span 3;grid-row:span 2}
+.panel.e{grid-column:span 5;grid-row:span 2}
+.panel .lab{font-size:9px;letter-spacing:.17em;text-transform:uppercase;font-weight:900;color:var(--red)}
+.panel h3{font-size:clamp(22px,2.5vw,34px);margin-top:16px}
+.panel p{font-size:13px;color:#5f5f5f;margin:0}
+.panel.darkp p{color:#bdbdbd}
+.panel .big{font-size:55px;font-weight:900;color:var(--red);letter-spacing:-.055em;line-height:.9;margin:18px 0}
+.platform{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:25px}
+.platform span{border:1px solid #333;padding:7px 9px;font-size:10px}
+.platform i{color:var(--red);font-style:normal;font-weight:900}
+.today{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-top:20px}
+.today div{padding:16px;border:1px solid #d3cdc3;text-align:center;font-size:12px;font-weight:850}
+.today .now{background:#111;color:#fff;border-color:#111}
+.case-note{border-left:4px solid var(--red);padding-left:15px;margin-top:22px;font-size:14px;color:#d0d0d0}
+
+/* objection */
+.objection{background:#f4f1eb}
+.objection-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
+.quote-box{background:#fff;border:1px solid #dcd5c9;padding:34px;box-shadow:12px 12px 0 #111;position:relative}
+.quote-box:before{content:"OBJECTION #01";position:absolute;top:-13px;left:22px;background:var(--red);color:#fff;padding:5px 9px;font-size:9px;letter-spacing:.13em;font-weight:900}
+.quote-box q{font-size:clamp(29px,4vw,44px);font-weight:900;line-height:1.06;letter-spacing:-.04em}
+.quote-box .reply{margin-top:24px;color:var(--red);font-weight:900;font-size:18px}
+
+/* Rob */
+.rob{background:#0a0a0a;color:#fff}
+.rob-grid{display:grid;grid-template-columns:350px 1fr;gap:54px;align-items:center}
+.rob-photo{border:1px solid #303030;border-radius:10px;overflow:hidden;position:relative}
+.rob-photo img{width:100%;aspect-ratio:.95;object-fit:cover;object-position:center}
+.rob-photo:after{content:"ROB PICKERING · CASE REVIEW";position:absolute;left:14px;bottom:14px;background:#0a0a0a;color:#fff;padding:8px 10px;font-size:9px;font-weight:900;letter-spacing:.12em}
+.rob p{color:#c9c9c9}
+.rob-sign{font-size:26px;font-weight:900;margin-top:24px}
+
+/* chapters */
+.chapter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:32px}
+.chapter{display:grid;grid-template-columns:50px 1fr;gap:15px;padding:22px;border:1px solid var(--line);background:#fff}
+.chapter .n{font-size:25px;font-weight:900;color:var(--red)}
+.chapter h3{font-size:17px;margin-bottom:6px}
+.chapter p{font-size:14px;color:#666;margin:0}
+.chip{display:inline-block;margin-top:8px;padding:4px 7px;background:#eee8de;font-size:11px;font-weight:850}
+
+/* GARBAGE */
+.bs{background:#0a0a0a;color:#fff;position:relative;overflow:hidden}
+.bs:after{content:"GARBAGE";position:absolute;right:-25px;bottom:-100px;font-size:340px;font-weight:900;color:#111;line-height:1;pointer-events:none}
+.bs-in{position:relative;z-index:2}
+.bs-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;margin-top:34px}
+.bs-punch{font-size:clamp(30px,4.2vw,48px);font-weight:900;line-height:1.03;letter-spacing:-.04em}
+.bs-punch div{padding:13px 0;border-top:1px solid #2b2b2b}
+.bs-punch span{color:var(--red)}
+.bs-copy{border-left:4px solid var(--red);padding-left:24px}
+.bs-copy p{color:#c7c7c7}
+
+/* do nothing */
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.scenario{border:1px solid var(--line);padding:30px;background:#fff}
+.scenario .who{font-size:11px;letter-spacing:.15em;font-weight:900;color:#777;text-transform:uppercase}
+.scenario h3{font-size:30px;margin-top:10px}
+.path{margin-top:24px}
+.path div{padding:12px 14px;border:1px solid var(--line);margin-top:-1px;font-size:14px}
+.scenario.bad{border-top:5px solid var(--red)}
+.scenario.bad .path div:last-child{background:#111;color:#fff;font-weight:900}
+.risk{margin-top:28px;padding:24px;background:#111;color:#fff;text-align:center;font-size:clamp(21px,3vw,31px);font-weight:900}
+.risk span{color:var(--red)}
+
+/* audio */
+.audio{background:#f4f1eb}
+.audio-card{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid #d8d0c5;background:#fff;box-shadow:0 22px 54px rgba(0,0,0,.1)}
+.audio-photo{min-height:420px;position:relative;background:#111;overflow:hidden}
+.audio-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.audio-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 45%)}
+.audio-photo .tag{position:absolute;z-index:2;left:24px;bottom:22px;color:#fff}
+.audio-photo .tag b{display:block;font-size:20px}
+.audio-photo .tag span{font-size:11px;color:#c3c3c3}
+.audio-copy{padding:42px;display:flex;flex-direction:column;justify-content:center}
+.player{display:flex;align-items:center;gap:12px;margin:22px 0 9px;border:1px solid var(--line);padding:12px;background:#fafafa}
+.play{width:46px;height:46px;border-radius:50%;border:0;background:var(--red);color:#fff;cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+.track{height:6px;background:#ddd;flex:1;overflow:hidden}
+.track span{display:block;height:100%;width:0;background:var(--red)}
+
+/* simple decision */
+.decision{background:#fff}
+.decision-card{max-width:900px;margin:auto;border:2px solid #111;padding:42px;position:relative}
+.decision-card:before{content:"THE ENTIRE DECISION";position:absolute;top:-14px;left:28px;background:#fff;padding:0 10px;font-size:11px;font-weight:900;letter-spacing:.15em}
+.decision-grid{display:grid;grid-template-columns:180px 1fr;gap:34px;align-items:center}
+.decision-price{font-size:95px;font-weight:900;letter-spacing:-.08em;line-height:.85;color:var(--red)}
+.decision-price sup{font-size:.32em;vertical-align:top;position:relative;top:.1em}
+.decision-copy b{display:block;font-size:25px;line-height:1.1;margin-bottom:10px}
+.decision-copy p{margin:0;color:#5b5b5b}
+
+/* final close */
+.close{background:
+ radial-gradient(circle at 50% 15%,rgba(212,46,46,.12),transparent 26%),
+ linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+ #090909;background-size:auto,42px 42px,42px 42px,auto;color:#fff}
+.close .lead{color:#c8c8c8;max-width:760px;margin-left:auto;margin-right:auto}
+.buybox{max-width:760px;margin:38px auto 0;border:1px solid #303030;background:#0d0d0d;padding:38px;box-shadow:0 28px 70px rgba(0,0,0,.34)}
+.price{font-size:clamp(86px,12vw,130px);font-weight:900;letter-spacing:-.075em;line-height:.86;color:#fff;margin:18px 0}
+.price sup{font-size:.3em;vertical-align:top;position:relative;top:.12em;color:var(--red)}
+.offer{list-style:none;padding:0;margin:0 0 28px;text-align:left}
+.offer li{padding:11px 0;border-top:1px solid #272727;color:#eee;font-size:15px}
+.offer li:before{content:"✓";color:var(--red);font-weight:900;margin-right:10px}
+.buybox .cta{width:100%;border-radius:6px}
+.no-sub{font-size:12px;color:#858585;margin-top:13px}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 34px 20px 0;font-weight:850;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:0;top:10px;font-size:28px;color:var(--red)}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding:0 0 20px;margin:0;color:#5d5d5d;font-size:15px}
+footer{background:#050505;color:#777;text-align:center;padding:28px 18px;font-size:12px;border-top:1px solid #222}
+.mobile-buy{display:none}
+
+@media(max-width:900px){
+ .hero-grid,.missing-grid,.preview-head,.objection-grid,.rob-grid,.bs-grid,.audio-card,.decision-grid{grid-template-columns:1fr}
+ .hero-grid{gap:28px}
+ .product-stage{min-height:535px}
+ .receipt-in{grid-template-columns:1fr 1fr}
+ .receipt:nth-child(2){border-right:0}
+ .receipt:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .number-grid,.scenario-grid{grid-template-columns:1fr}
+ .preview-grid{grid-template-columns:1fr;grid-auto-rows:auto}
+ .panel.a,.panel.b,.panel.c,.panel.d,.panel.e{grid-column:auto;grid-row:auto;min-height:240px}
+ .chapter-grid{grid-template-columns:1fr}
+ .rob-photo{max-width:370px;margin:auto}
+ .decision-grid{text-align:center}
+}
+@media(max-width:560px){
+ body{font-size:16px;padding-bottom:72px}
+ section{padding:68px 0}
+ .wrap,.copy{width:calc(100% - 28px)}
+ .topbar-in{height:54px}
+ .topbrand span,.topbar .cta{display:none}
+ .hero{padding:54px 0 64px}
+ h1{font-size:clamp(50px,15vw,68px)}
+ h2{font-size:clamp(36px,11vw,49px)}
+ .product-stage{min-height:455px}
+ .folder{width:82%;height:380px}
+ .report-cover{width:80%;padding:24px 21px}
+ .cover-title{font-size:38px}
+ .evidence-tag.one{right:0;top:25px}
+ .evidence-tag.two{left:0;bottom:25px}
+ .receipt-in{grid-template-columns:1fr}
+ .receipt{border-right:0;border-bottom:1px solid var(--line)}
+ .micro-loss{grid-template-columns:1fr}
+ .audio-copy{padding:30px 22px}
+ .audio-photo{min-height:350px}
+ .decision-card{padding:34px 22px}
+ .buybox{padding:30px 20px}
+ .mobile-buy{display:block;position:fixed;z-index:120;left:10px;right:10px;bottom:10px}
+ .mobile-buy .cta{width:100%;box-shadow:0 15px 35px rgba(0,0,0,.32)}
+}
+</style>
+<style id="v4-polish">
+:root{
+ --red:#d92f35;
+ --red2:#b71920;
+}
+body{font-size:18px;line-height:1.62}
+h1{font-size:clamp(56px,7.2vw,90px);line-height:.91}
+h2{font-size:clamp(40px,5vw,62px);line-height:.98}
+.lead{font-size:clamp(19px,1.8vw,22px);line-height:1.52}
+.cta{min-height:54px;letter-spacing:-.01em}
+.cta.big{min-height:60px;padding:20px 30px}
+.hero{
+ padding:88px 0 98px;
+ background:
+ radial-gradient(ellipse at 78% 35%,rgba(204,30,38,.24),transparent 34%),
+ radial-gradient(ellipse at 56% 5%,rgba(116,11,16,.15),transparent 30%),
+ linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),
+ #080808;
+ background-size:auto,auto,46px 46px,46px 46px,auto;
+}
+.hero:after{
+ content:"";position:absolute;right:5%;top:7%;width:43%;height:72%;pointer-events:none;
+ background:radial-gradient(circle,rgba(218,38,45,.14),transparent 66%);
+ filter:blur(18px);
+}
+.hero-grid{position:relative;z-index:2;grid-template-columns:.96fr 1.04fr;gap:72px}
+.hero h1{max-width:650px}
+.hero .subhit{max-width:650px;font-size:clamp(25px,2.6vw,33px);line-height:1.12}
+.hero .lead{max-width:650px;font-size:20px}
+.product-stage{min-height:630px}
+.folder{background:#ded7cc;box-shadow:0 35px 90px rgba(0,0,0,.55)}
+.report-cover{width:min(430px,90%);box-shadow:0 44px 95px rgba(0,0,0,.62)}
+.evidence-tag{border:1px solid #e2ddd6}
+.receipt-strip{box-shadow:0 10px 28px rgba(0,0,0,.05)}
+.receipt{padding:27px 25px}
+.missing-grid,.objection-grid,.rob-grid{gap:64px}
+.ai-screen{box-shadow:0 28px 70px rgba(0,0,0,.2)}
+.numbers{
+ position:relative;overflow:hidden;
+ background:
+ radial-gradient(ellipse at 74% 25%,rgba(205,35,42,.22),transparent 32%),
+ linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
+ #090909;
+ background-size:auto,42px 42px,42px 42px,auto;
+}
+.numbers:before,.bs:before,.close:before{
+ content:"";position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(115deg,transparent 0 52%,rgba(212,46,46,.045) 52% 66%,transparent 66%);
+}
+.numbers>.wrap,.bs-in,.close>.wrap{position:relative;z-index:2}
+.number{background:linear-gradient(180deg,rgba(24,24,24,.98),rgba(13,13,13,.98));box-shadow:0 18px 42px rgba(0,0,0,.22)}
+.preview-grid{gap:18px}
+.panel{box-shadow:0 18px 42px rgba(0,0,0,.10)}
+.panel.darkp{
+ background:
+ radial-gradient(circle at 85% 15%,rgba(212,46,46,.12),transparent 28%),
+ linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+ #0a0a0a;
+ background-size:auto,28px 28px,28px 28px,auto;
+}
+.rob{
+ position:relative;overflow:hidden;
+ background:
+ radial-gradient(ellipse at 75% 30%,rgba(212,46,46,.18),transparent 32%),
+ linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+ #090909;
+ background-size:auto,42px 42px,42px 42px,auto;
+}
+.rob-grid{position:relative;z-index:2}
+.rob-photo{box-shadow:0 26px 70px rgba(0,0,0,.42)}
+.bs{
+ background:
+ radial-gradient(ellipse at 70% 30%,rgba(212,46,46,.20),transparent 32%),
+ linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+ #090909;
+ background-size:auto,42px 42px,42px 42px,auto;
+}
+.bs:after{content:"07";right:0;bottom:-95px;font-size:360px;color:#111}
+.scenario{box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.audio{
+ background:
+ linear-gradient(rgba(20,20,20,.025) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(20,20,20,.025) 1px,transparent 1px),
+ #f3efe8;
+ background-size:42px 42px,42px 42px,auto;
+}
+.audio-card{box-shadow:0 30px 75px rgba(0,0,0,.13)}
+.audio-photo img{object-fit:cover;object-position:center}
+.audio-copy h2{font-size:clamp(40px,4.7vw,62px)}
+.decision-card{box-shadow:14px 14px 0 #ece7df}
+.close{
+ position:relative;overflow:hidden;
+ background:
+ radial-gradient(ellipse at 50% 10%,rgba(212,46,46,.22),transparent 30%),
+ linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
+ #080808;
+ background-size:auto,42px 42px,42px 42px,auto;
+}
+.buybox{box-shadow:0 34px 90px rgba(0,0,0,.46)}
+@media(max-width:900px){
+ body{font-size:17px}
+ .hero-grid{grid-template-columns:1fr;gap:24px}
+ .hero h1,.hero .subhit,.hero .lead{max-width:none}
+ .product-stage{min-height:550px}
+}
+@media(max-width:560px){
+ body{font-size:16px}
+ .hero{padding:58px 0 70px}
+ .hero h1{font-size:clamp(49px,14.5vw,66px)}
+ .hero .subhit{font-size:23px}
+ .hero .lead{font-size:17px}
+ .product-stage{min-height:465px}
+ .cta.big{font-size:16px;padding:18px 18px}
+}
+</style>
+<style>
+/* V5 hero: stronger campaign opening + image reliability */
+.hero-v5{padding-top:0}
+.hero-alert{height:44px;display:flex;align-items:center;justify-content:center;gap:10px;background:#d42e2e;color:#fff;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;position:relative;z-index:5}
+.hero-alert span{background:#fff;color:#111;padding:4px 7px}
+.hero-alert b{opacity:.55}
+.hero-v5 .hero-grid{padding-top:70px}
+.hero-copy{position:relative}
+.hero-copy:before{content:"01";position:absolute;left:-52px;top:4px;color:#242424;font-size:12px;font-weight:900;letter-spacing:.12em}
+.hero-v5 h1{max-width:720px;margin-bottom:23px;text-shadow:0 12px 45px rgba(0,0,0,.28)}
+.hero-verdict{display:inline-block;border-left:5px solid #d42e2e;padding:9px 0 9px 15px;margin:0 0 22px;font-size:clamp(19px,2vw,26px);font-weight:900;line-height:1.15;letter-spacing:-.025em;color:#fff}
+.hero-verdict strong{color:#ff4248}
+.hero-v5 .lead{font-size:19px;max-width:650px}
+.hero-actions{margin-top:4px}
+.hero-product{isolation:isolate}
+.hero-red-plane{position:absolute;z-index:1;width:455px;height:470px;background:linear-gradient(145deg,#7c0c10,#260607);transform:rotate(-7deg);border:1px solid rgba(255,70,70,.2);box-shadow:0 32px 80px rgba(120,0,0,.2)}
+.hero-product .folder{z-index:2;transform:rotate(5deg) translate(8px,8px)}
+.hero-product .report-cover{z-index:4;transform:rotate(-2deg) translateY(-5px)}
+.hero-source-card{position:absolute;z-index:8;right:-8px;bottom:30px;width:190px;background:#f1ede5;color:#111;padding:15px 17px;box-shadow:0 18px 40px rgba(0,0,0,.34);transform:rotate(3deg);border-top:4px solid #d42e2e}
+.hero-source-card span{display:block;color:#d42e2e;font-size:9px;font-weight:900;letter-spacing:.16em;margin-bottom:7px}
+.hero-source-card strong{font-size:17px;line-height:1.15}
+.rob-photo img,.audio-photo img{display:block;width:100%;height:100%}
+.rob-photo img{aspect-ratio:.95;object-fit:cover;object-position:center}
+@media(max-width:900px){
+ .hero-alert{padding:0 14px;text-align:center;font-size:9px}
+ .hero-v5 .hero-grid{padding-top:50px}
+ .hero-copy:before{display:none}
+ .hero-source-card{right:0}
+}
+@media(max-width:560px){
+ .hero-alert{height:auto;min-height:42px;line-height:1.25}
+ .hero-alert span,.hero-alert b{display:none}
+ .hero-v5 .hero-grid{padding-top:42px}
+ .hero-v5 h1{font-size:clamp(50px,15vw,66px)}
+ .hero-verdict{font-size:18px}
+ .hero-v5 .lead{font-size:17px}
+ .hero-red-plane{width:78%;height:360px}
+ .hero-source-card{width:155px;right:0;bottom:5px}
+ .hero-source-card strong{font-size:14px}
+}
+</style>
+<style>
+/* FINAL hero: approved visual on desktop, readable live hero on mobile */
+.hero-final{background:#080808}
+.hero-visual-wrap{position:relative;width:100%;background:#080808;overflow:hidden}
+.hero-visual{display:block;width:100%;height:auto}
+.hero-hotspot{
+  position:absolute;
+  left:5.6%;
+  top:72.8%;
+  width:31.3%;
+  height:8.2%;
+  border-radius:8px;
+  cursor:pointer;
+  z-index:5;
+}
+.hero-hotspot:focus{outline:3px solid #fff;outline-offset:4px}
+.hero-mobile-live{display:none}
+.mobile-report-card{margin-top:26px;border:1px solid #2b2b2b;box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.mobile-report-card img{width:100%;display:block}
+.final-price-visual{margin:-8px -8px 28px;overflow:hidden;border:1px solid #2b2b2b}
+.final-price-visual img{width:100%;display:block}
+.buybox>.stamp{margin-top:4px}
+@media(max-width:900px){
+  .hero-visual-wrap{display:none}
+  .hero-mobile-live{
+    display:block;
+    padding:56px 0 62px;
+    color:#fff;
+    background:
+      radial-gradient(circle at 75% 18%,rgba(212,46,46,.22),transparent 28%),
+      linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
+      #080808;
+    background-size:auto,40px 40px,40px 40px,auto;
+  }
+  .hero-mobile-live h1{font-size:clamp(48px,14vw,66px);line-height:.92}
+  .hero-mobile-live .lead{color:#d0d0d0;font-size:17px}
+  .hero-mobile-live .hero-verdict{display:block}
+}
+</style>
+<style>
+/* FINAL v2 — animated evidence charts */
+.number-grid-v2{align-items:stretch}
+.number-grid-v2 .number{min-height:390px}
+.trend-card,.signal-card{display:flex;flex-direction:column}
+.trend-label{
+  color:#777;font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:900;margin-bottom:18px
+}
+.trend-chart{position:relative;height:185px;margin:0 0 13px}
+.trend-chart svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;overflow:visible}
+.trend-line{
+  fill:none;stroke:#e42f37;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:520;stroke-dashoffset:520;
+  animation:drawTrend 1.6s cubic-bezier(.22,.8,.22,1) .2s forwards
+}
+.trend-dot{fill:#e42f37;opacity:0;animation:showDot .3s ease forwards}
+.dot-start{animation-delay:.25s}
+.dot-end{animation-delay:1.65s;filter:drop-shadow(0 0 7px rgba(228,47,55,.8))}
+.trend-start,.trend-end{position:absolute;z-index:4}
+.trend-start{left:0;bottom:2px}
+.trend-end{right:0;top:-2px;text-align:right}
+.trend-start b,.trend-end b{
+  display:block;font-size:clamp(36px,4.3vw,54px);line-height:.9;font-weight:900;letter-spacing:-.055em
+}
+.trend-start b{color:#777}
+.trend-end b{color:#e42f37;text-shadow:0 0 22px rgba(228,47,55,.18)}
+.trend-start span,.trend-end span{
+  display:block;margin-top:6px;color:#686868;font-size:8px;letter-spacing:.17em;font-weight:900
+}
+.gain-badge{
+  display:inline-flex;align-self:flex-start;background:#251012;border:1px solid #632026;
+  color:#ff5c63;font-size:9px;font-weight:900;letter-spacing:.11em;padding:6px 8px;margin:0 0 14px
+}
+.featured-trend{border-color:#492024!important;box-shadow:0 0 0 1px rgba(212,46,46,.06) inset}
+.signal-number{
+  font-size:clamp(78px,7vw,100px);line-height:.88;color:#e42f37;
+  font-weight:900;letter-spacing:-.065em;margin:7px 0 25px
+}
+.signal-meter{height:12px;background:#292929;overflow:hidden;margin-bottom:16px;position:relative}
+.signal-meter span{
+  display:block;height:100%;width:22%;background:#e42f37;
+  transform-origin:left;transform:scaleX(0);animation:fillMeter 1.15s cubic-bezier(.22,.8,.22,1) .35s forwards
+}
+.signal-caption{display:flex;align-items:baseline;gap:9px;margin-bottom:20px}
+.signal-caption b{color:#fff;font-size:13px}
+.signal-caption span{color:#777;font-size:11px}
+.number-grid-v2 .number p{margin-top:auto}
+@keyframes drawTrend{to{stroke-dashoffset:0}}
+@keyframes showDot{to{opacity:1}}
+@keyframes fillMeter{to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){
+ .trend-line{animation:none;stroke-dashoffset:0}
+ .trend-dot{animation:none;opacity:1}
+ .signal-meter span{animation:none;transform:scaleX(1)}
+}
+@media(max-width:900px){
+ .number-grid-v2 .number{min-height:360px}
+ .trend-chart{height:180px}
+}
+</style>
+<style id="hybrid-v4-art-direction">
+/* ==========================================================
+   HYBRID V4
+   Goal: retain the original site's polish/graphics, remove the
+   over-produced AI/cyber feel, and create stronger visual rhythm.
+   ========================================================== */
+
+:root{
+  --v4-ink:#15191d;
+  --v4-charcoal:#20262c;
+  --v4-slate:#344552;
+  --v4-paper:#ffffff;
+  --v4-warm:#f6f4ef;
+  --v4-soft:#eef1f2;
+  --v4-line:#dfe3e5;
+  --v4-red:#d92f35;
+  --v4-muted:#687078;
+}
+
+/* Global restraint */
+body{
+  background:var(--v4-paper);
+  color:var(--v4-ink);
+}
+section{padding:82px 0}
+h1,h2{letter-spacing:-.045em}
+h2{font-size:clamp(38px,4.7vw,58px)}
+.kicker{color:var(--v4-red);letter-spacing:.16em}
+.lead{color:#525a61}
+
+/* Sticky bar: professional, not theatrical */
+.topbar{
+  background:rgba(24,29,33,.97);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+}
+.topbrand{letter-spacing:.01em}
+.cta{
+  border-radius:6px;
+  box-shadow:none;
+}
+.cta:hover{transform:translateY(-1px)}
+
+/* ----------------------------------------------------------
+   HERO — same words, calmer presentation
+   ---------------------------------------------------------- */
+.hero-final{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(217,47,53,.07),transparent 25%),
+    linear-gradient(180deg,#fbfbfa 0%,#f4f2ed 100%);
+  color:var(--v4-ink);
+  border-bottom:1px solid var(--v4-line);
+}
+.hero-visual-wrap{display:none!important}
+.hero-mobile-live{
+  display:block!important;
+  padding:74px 0 78px!important;
+  color:var(--v4-ink)!important;
+  background:transparent!important;
+}
+.hybrid-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(390px,.98fr);
+  gap:68px;
+  align-items:center;
+}
+.hybrid-hero-copy{max-width:680px}
+.hero-mobile-live .kicker{
+  color:#8c3438;
+  font-size:11px;
+  margin-bottom:18px;
+}
+.hero-mobile-live h1{
+  color:var(--v4-ink);
+  font-size:clamp(58px,6.8vw,88px);
+  line-height:.91;
+  margin-bottom:24px;
+  text-shadow:none;
+}
+.hero-mobile-live h1 .red{color:var(--v4-red)}
+.hero-mobile-live .hero-verdict{
+  display:block;
+  max-width:620px;
+  color:var(--v4-charcoal);
+  border-left:4px solid var(--v4-red);
+  padding:8px 0 8px 16px;
+  margin:0 0 22px;
+  font-size:clamp(20px,2vw,27px);
+}
+.hero-mobile-live .hero-verdict strong{color:var(--v4-red)}
+.hero-mobile-live .lead{
+  color:#4f575e!important;
+  max-width:640px;
+  font-size:19px!important;
+}
+.hero-proof{margin:25px 0 28px}
+.hero-proof span{color:#596168!important}
+.hero-note{color:#777f85!important}
+.hybrid-hero-product{
+  position:relative;
+  padding:18px 18px 22px;
+}
+.hybrid-hero-product:before{
+  content:"";
+  position:absolute;
+  inset:8% -2% -3% 10%;
+  background:#e8e4dc;
+  border:1px solid #ddd7cd;
+  transform:rotate(2.2deg);
+  border-radius:8px;
+}
+.hybrid-hero-product:after{
+  content:"";
+  position:absolute;
+  width:150px;height:5px;
+  right:7%;top:5%;
+  background:var(--v4-red);
+  opacity:.8;
+}
+.mobile-report-card{
+  position:relative;
+  z-index:2;
+  margin:0!important;
+  background:#fff;
+  border:1px solid #d7d7d4!important;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 28px 65px rgba(24,29,33,.16)!important;
+  transform:rotate(-1deg);
+}
+.mobile-report-card img{width:100%;display:block}
+
+/* ----------------------------------------------------------
+   OPENING — preserve graphics but let the page breathe
+   ---------------------------------------------------------- */
+.intro-section{
+  background:#fff;
+  border-bottom:1px solid var(--v4-line);
+}
+.customer-search-section{
+  background:var(--v4-warm);
+}
+.ai-screen{
+  background:#1b2025;
+  border-color:#323a41;
+  box-shadow:0 18px 42px rgba(24,29,33,.12);
+}
+.not-you{border-width:1px}
+
+/* Evidence: still impactful, no cyber grid/glow */
+.evidence-section{
+  background:#20262c!important;
+  background-image:none!important;
+}
+.evidence-section:before{display:none!important}
+.number{
+  background:#282f35!important;
+  border:1px solid #3a434a!important;
+  box-shadow:none!important;
+  border-radius:6px;
+}
+.number:before{display:none}
+.featured-trend{border-color:#4a535a!important}
+.trend-line{stroke:var(--v4-red)}
+.signal-number,.num{color:var(--v4-red)}
+.gain-badge{
+  background:#343a40;
+  border-color:#50585f;
+  color:#f06a6f;
+}
+
+/* ----------------------------------------------------------
+   REPORT PREVIEW — this was the busiest section.
+   Reduce five competing graphics to three clear previews.
+   ---------------------------------------------------------- */
+.preview-section{
+  background:#fff;
+}
+.preview-section .preview-head{
+  grid-template-columns:.82fr 1.18fr;
+  gap:70px;
+  margin-bottom:38px;
+}
+.preview-section .preview-note{
+  border-left:3px solid var(--v4-red);
+  color:#596168;
+  max-width:620px;
+}
+.preview-section .preview-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  grid-template-rows:auto auto;
+  gap:18px;
+  max-width:1040px;
+  margin:0 auto;
+}
+.preview-section .panel{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  min-height:250px;
+  border-radius:7px;
+  box-shadow:0 12px 30px rgba(24,29,33,.07);
+}
+.preview-section .panel.a{
+  grid-row:span 2!important;
+  min-height:520px;
+}
+.preview-section .panel.b{
+  min-height:250px;
+  background:#f2efe8;
+}
+.preview-section .panel.c,
+.preview-section .panel.d{
+  display:none!important;
+}
+.preview-section .panel.e{
+  min-height:250px;
+  background:#fff;
+}
+.preview-section .panel.darkp{
+  background:#20262c!important;
+  background-image:none!important;
+  border-color:#333c43;
+}
+.preview-section .panel.paperp{
+  background:#f2efe8;
+  border-color:#e0dbd2;
+}
+.preview-section .panel.whitep{
+  border-color:var(--v4-line);
+}
+.preview-section .panel .big{color:var(--v4-red)}
+.preview-section .platform span{border-color:#596168}
+.preview-section .case-note{border-left-width:3px}
+
+/* Objection: editorial quote, less gimmick */
+.objection-section-v4{
+  background:var(--v4-warm)!important;
+}
+.quote-box{
+  box-shadow:8px 8px 0 #d9d5ce;
+  border-color:#d9d5ce;
+}
+.quote-box:before{
+  background:var(--v4-charcoal);
+  letter-spacing:.11em;
+}
+
+/* Rob: human credibility should be light, not another AI-tech panel */
+.rob-section-v4{
+  background:#fff!important;
+  background-image:none!important;
+  color:var(--v4-ink)!important;
+  border-top:1px solid var(--v4-line);
+  border-bottom:1px solid var(--v4-line);
+}
+.rob-section-v4 .rob-grid{gap:66px}
+.rob-section-v4 .rob-photo{
+  border:0;
+  border-radius:8px;
+  box-shadow:0 20px 48px rgba(24,29,33,.13);
+}
+.rob-section-v4 .rob-photo:after{
+  background:rgba(24,29,33,.92);
+}
+.rob-section-v4 p{color:#555e65!important}
+.rob-section-v4 strong{color:var(--v4-ink)!important}
+.rob-section-v4 .small{color:#737b81!important}
+
+/* Chapters: clean publication TOC */
+.chapters-section-v4{background:#f7f7f5!important}
+.chapter-grid{gap:0;border-top:1px solid var(--v4-line)}
+.chapter{
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--v4-line);
+  padding:24px 14px 24px 0;
+}
+.chapter:nth-child(odd){padding-right:28px}
+.chapter:nth-child(even){padding-left:28px}
+.chapter .n{font-size:18px}
+.chip{background:#e8e6e1}
+
+/* Keep ONE strong dark editorial section, but remove tech effects */
+.garbage-section-v4{
+  background:#20262c!important;
+  background-image:none!important;
+}
+.garbage-section-v4:before{display:none!important}
+.garbage-section-v4:after{
+  opacity:.22;
+  color:#30383f!important;
+}
+
+/* Risk section: white, straightforward */
+.risk-section-v4{background:#fff}
+.scenario{
+  box-shadow:none;
+  border-color:var(--v4-line);
+  border-radius:6px;
+}
+.risk{
+  background:var(--v4-charcoal);
+  border-radius:5px;
+}
+
+/* Audio: premium feature treatment */
+.audio-section-v4{
+  background:#f2efe9!important;
+  background-image:none!important;
+}
+.audio-card{
+  border-color:#d9d5ce;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(24,29,33,.10);
+}
+.player{border-radius:5px}
+
+/* Decision: deliberately simple */
+.decision-section-v4{background:#fff}
+.decision-card{
+  border:1px solid #cfd4d7;
+  box-shadow:10px 10px 0 #eceeed;
+  border-radius:6px;
+}
+.decision-card:before{color:#606970}
+.decision-price{color:var(--v4-red)}
+
+/* Closing: strong, but not cyber */
+.close-section-v4{
+  background:#20262c!important;
+  background-image:none!important;
+}
+.close-section-v4:before{display:none!important}
+.buybox{
+  background:#272e34;
+  border-color:#3a434a;
+  border-radius:7px;
+  box-shadow:0 24px 58px rgba(0,0,0,.20);
+}
+
+/* FAQ */
+.faq-section-v4{background:#fafafa}
+.faq-section-v4 details{border-color:#dde1e3}
+
+/* Responsive */
+@media(max-width:900px){
+  section{padding:68px 0}
+  .hybrid-hero-grid{grid-template-columns:1fr;gap:38px}
+  .hybrid-hero-copy{max-width:none}
+  .hybrid-hero-product{max-width:600px;margin:0 auto}
+  .preview-section .preview-head{grid-template-columns:1fr;gap:18px}
+  .preview-section .preview-grid{grid-template-columns:1fr}
+  .preview-section .panel.a{grid-row:auto!important;min-height:380px}
+  .preview-section .panel.e{display:block}
+  .chapter:nth-child(odd),.chapter:nth-child(even){padding-left:0;padding-right:0}
+}
+@media(max-width:560px){
+  .hero-mobile-live{padding:48px 0 56px!important}
+  .hero-mobile-live h1{font-size:clamp(48px,14vw,64px)}
+  .hybrid-hero-grid{gap:28px}
+  .hybrid-hero-product{padding:8px}
+  .hybrid-hero-product:after{width:95px}
+  .preview-section .panel.a{min-height:320px}
+  .preview-section .panel.e{min-height:220px}
+}
+</style>
+<style id="v5-polish">
+/* V5 — stronger hero + interactive report preview + clean author portrait */
+.hero-final{overflow:hidden}
+.hybrid-hero-grid{grid-template-columns:minmax(0,.95fr) minmax(520px,1.05fr);gap:48px}
+.hybrid-hero-product{min-height:570px;display:flex;align-items:flex-end;justify-content:flex-end;padding:0}
+.hybrid-hero-product:before,.hybrid-hero-product:after{display:none!important}
+.v5-contractor-photo{
+ position:absolute; inset:0 16% 0 0; border-radius:14px; overflow:hidden;
+ box-shadow:0 26px 70px rgba(24,29,33,.16); background:#ddd;
+}
+.v5-contractor-photo:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(90deg,rgba(20,24,28,.03),rgba(20,24,28,0) 50%,rgba(20,24,28,.13));
+}
+.v5-contractor-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.v5-loss-badge{
+ position:absolute;z-index:2;left:22px;bottom:22px;max-width:300px;
+ background:rgba(255,255,255,.94);border-left:4px solid var(--v4-red);
+ padding:12px 14px;font-size:11px;font-weight:900;line-height:1.35;letter-spacing:.07em;color:#24292d;
+ box-shadow:0 8px 24px rgba(0,0,0,.12)
+}
+.hybrid-hero-product .mobile-report-card{
+ width:43%;margin:0 0 -18px auto!important;transform:rotate(1.2deg);
+ box-shadow:0 28px 65px rgba(24,29,33,.24)!important;border-radius:5px;z-index:5;
+}
+
+/* Author portrait: no black square, no banner */
+.v5-author-photo{
+ width:330px!important;height:330px!important;aspect-ratio:1/1;
+ border-radius:50%!important;overflow:hidden!important;background:transparent!important;
+ box-shadow:0 18px 42px rgba(24,29,33,.14)!important;margin:auto;
+}
+.v5-author-photo img{
+ width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important;
+ border-radius:50%!important;
+}
+.v5-author-photo:after,.v5-author-photo:before{display:none!important}
+
+/* Chapter preview */
+.chapters-section-v4{background:linear-gradient(180deg,#f8f7f3 0%,#fff 100%)!important}
+.v5-carousel-shell{margin-top:36px}
+.v5-carousel-intro{max-width:700px;color:#646c72;font-size:17px;margin-bottom:22px}
+.v5-track{
+ display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 3px 20px;
+ scrollbar-width:none;
+}
+.v5-track::-webkit-scrollbar{display:none}
+.v5-chapter-card{
+ flex:0 0 275px;min-height:330px;scroll-snap-align:start;text-align:left;
+ position:relative;border:1px solid #d7dbdd;border-radius:8px;padding:24px;
+ background:#fff;color:#1b2024;cursor:pointer;overflow:hidden;
+ box-shadow:0 12px 30px rgba(24,29,33,.07);transition:.2s ease;
+}
+.v5-chapter-card:hover{transform:translateY(-2px)}
+.v5-chapter-card.active{background:#20262c;color:#fff;border-color:#20262c}
+.v5-chapter-card.locked:before{
+ content:"";position:absolute;inset:0;z-index:2;
+ backdrop-filter:blur(5px);background:rgba(34,39,43,.58);
+}
+.v5-chapter-card.locked strong,.v5-chapter-card.locked .v5-card-desc{filter:blur(2.5px)}
+.v5-num{display:block;color:var(--v4-red);font-weight:900;font-size:30px;margin-bottom:34px;position:relative;z-index:3}
+.v5-chapter-card strong{display:block;font-size:26px;line-height:1.02;margin-bottom:16px;position:relative}
+.v5-card-desc{display:block;font-size:14px;line-height:1.5;color:#697178}
+.v5-chapter-card.active .v5-card-desc{color:#c6cbd0}
+.v5-lock{
+ position:absolute;z-index:4;left:50%;top:55%;transform:translate(-50%,-50%);
+ background:#fff;color:#20262c;padding:8px 12px;border-radius:20px;font-size:10px;font-weight:900;letter-spacing:.12em;
+}
+.v5-nav{display:flex;justify-content:flex-end;gap:8px;margin:2px 0 22px}
+.v5-nav button{
+ width:44px;height:44px;border-radius:50%;border:1px solid #cfd4d7;background:#fff;
+ font-size:22px;cursor:pointer;
+}
+.v5-detail{
+ display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid #dfe3e5;background:#fff;
+ border-radius:8px;box-shadow:0 14px 36px rgba(24,29,33,.06);overflow:hidden;
+}
+.v5-detail-main{padding:30px 34px}
+.v5-detail-main h3{font-size:30px;line-height:1.05;margin:8px 0 10px}
+.v5-detail-main p{color:#626a70;margin:0;line-height:1.55}
+.v5-value{padding:30px 34px;background:#fbf1ef;border-left:1px solid #eadbd8}
+.v5-value ul{list-style:none;padding:0;margin:14px 0 0}
+.v5-value li{margin:10px 0;padding-left:24px;position:relative}
+.v5-value li:before{content:"✓";position:absolute;left:0;color:var(--v4-red);font-weight:900}
+.v5-carousel-cta{text-align:center;margin-top:28px}
+
+@media(max-width:900px){
+ .hybrid-hero-grid{grid-template-columns:1fr}
+ .hybrid-hero-product{min-height:500px}
+ .v5-contractor-photo{right:10%}
+ .hybrid-hero-product .mobile-report-card{width:40%}
+ .v5-detail{grid-template-columns:1fr}
+ .v5-value{border-left:0;border-top:1px solid #eadbd8}
+}
+@media(max-width:560px){
+ .hybrid-hero-product{min-height:420px}
+ .v5-contractor-photo{right:0}
+ .hybrid-hero-product .mobile-report-card{width:44%}
+ .v5-author-photo{width:260px!important;height:260px!important}
+ .v5-chapter-card{flex-basis:78vw;min-height:300px}
+}
+</style>
+<style id="v6-approved-direction">
+/* V6: approved visual direction — digital report, laptop + phone, no haunted-house/van hero */
+.hybrid-hero-grid{
+  grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);
+  gap:46px;
+}
+.hybrid-hero-product{
+  min-height:auto!important;
+  display:block!important;
+  padding:0!important;
+  align-self:center;
+}
+.v5-contractor-photo,
+.hybrid-hero-product .mobile-report-card{
+  display:none!important;
+}
+.v6-device-hero{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  background:#eeeae3;
+  border:1px solid #ded9d1;
+  box-shadow:0 26px 65px rgba(24,29,33,.16);
+}
+.v6-device-hero img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.v6-device-hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+  border-radius:12px;
+}
+.v6-digital-note{
+  position:absolute;
+  left:18px;
+  bottom:16px;
+  background:rgba(26,31,35,.92);
+  color:#fff;
+  padding:9px 12px;
+  border-radius:4px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+.v6-access-note{
+  margin-top:8px;
+  color:#7a8186;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* Slightly soften hero to match approved mockup */
+.hero-final{
+  background:
+    radial-gradient(circle at 76% 25%,rgba(217,47,53,.055),transparent 27%),
+    linear-gradient(180deg,#fbfbfa 0%,#f3f1ec 100%)!important;
+}
+.hero-mobile-live h1{max-width:650px}
+.hero-mobile-live .lead{max-width:610px}
+
+/* Preview section: more like the approved visual — lighter, less blocky */
+.v5-carousel-shell{margin-top:30px}
+.v5-track{gap:12px;padding-bottom:14px}
+.v5-chapter-card{
+  flex-basis:245px;
+  min-height:285px;
+  border-radius:6px;
+  padding:20px;
+  box-shadow:0 8px 22px rgba(24,29,33,.055);
+}
+.v5-chapter-card.active{
+  background:#fff;
+  color:#1b2024;
+  border:2px solid #d8dcde;
+}
+.v5-chapter-card.active .v5-card-desc{color:#697178}
+.v5-chapter-card.locked:before{
+  background:rgba(45,50,54,.42);
+  backdrop-filter:blur(7px);
+}
+.v5-num{margin-bottom:25px}
+.v5-chapter-card strong{font-size:23px}
+.v5-detail{
+  margin-top:4px;
+  box-shadow:0 8px 24px rgba(24,29,33,.045);
+}
+.v5-nav button{box-shadow:0 4px 12px rgba(24,29,33,.06)}
+
+@media(max-width:900px){
+ .hybrid-hero-grid{grid-template-columns:1fr;gap:34px}
+ .hybrid-hero-product{max-width:700px;margin:0 auto}
+}
+@media(max-width:560px){
+ .v6-device-hero{border-radius:8px}
+ .v6-digital-note{
+   position:static;
+   border-radius:0;
+   font-size:9px;
+ }
+ .v5-chapter-card{flex-basis:76vw;min-height:270px}
+}
+</style>
+<style id="v7-final-polish">
+/* HERO: the full approved banner is the hero. No cropping on desktop. */
+.hero-final{padding:0!important;background:#171c20!important;overflow:hidden}
+.v7-hero-picture{display:block;width:100%;max-width:1600px;margin:0 auto;background:#171c20}
+.v7-hero-picture img{display:block;width:100%;height:auto;object-fit:contain}
+
+/* Preview */
+.chapters-section-v4{background:linear-gradient(180deg,#f7f5f0 0%,#fff 100%)!important}
+.v7-preview-intro{display:flex;justify-content:space-between;gap:35px;align-items:end;margin:12px 0 30px;border-top:1px solid #e0e3e4;padding-top:24px}
+.v7-preview-intro p{max-width:620px;color:#626a70;font-size:17px;line-height:1.55;margin:8px 0 0}
+.v7-mini-proof{display:flex;flex-direction:column;min-width:260px;padding-left:20px;border-left:3px solid var(--v4-red)}
+.v7-mini-proof strong{font-size:24px}.v7-mini-proof span{font-size:13px;color:#687078;margin-top:3px}
+.v7-preview-experience{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(390px,.98fr);gap:28px;align-items:start}
+.v7-report-stage{position:sticky;top:92px}
+.v7-device{background:#20262c;border-radius:12px;padding:13px;box-shadow:0 22px 55px rgba(24,29,33,.16)}
+.v7-device-top{height:29px;display:flex;align-items:center;gap:6px;padding:0 5px;color:#b7bdc1}
+.v7-device-top span{width:7px;height:7px;border-radius:50%;background:#596168}.v7-device-top em{font-style:normal;font-size:9px;letter-spacing:.14em;margin-left:7px}
+.v7-page{position:relative;min-height:520px;background:#fbfaf7;padding:48px 46px;overflow:hidden;border-radius:4px}
+.v7-page-num{position:absolute;right:35px;top:28px;font-size:66px;font-weight:900;color:#ece8e1}
+.v7-page-kicker{font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--v4-red);position:relative}
+.v7-page h3{font-size:42px;line-height:1.02;max-width:420px;margin:20px 0 16px;position:relative}
+.v7-red-rule{height:4px;width:82px;background:var(--v4-red);margin-bottom:28px}
+.v7-faux-lines{display:grid;gap:12px;filter:blur(3px);opacity:.45}
+.v7-faux-lines i{display:block;height:12px;background:#aeb3b5;border-radius:2px}
+.v7-faux-lines i:nth-child(2){width:91%}.v7-faux-lines i:nth-child(3){width:78%}.v7-faux-lines i:nth-child(5){width:88%}.v7-faux-lines i:nth-child(6){width:67%}
+.v7-lock-overlay{position:absolute;left:50%;bottom:48px;transform:translateX(-50%);width:72%;background:rgba(31,37,42,.94);color:#fff;text-align:center;padding:18px 22px;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.v7-lock-icon{font-size:22px;margin-bottom:4px}.v7-lock-overlay strong{display:block;font-size:12px;letter-spacing:.12em}.v7-lock-overlay span{display:block;color:#cbd0d3;font-size:12px;margin-top:5px}
+.v7-device-caption{text-align:center;color:#7a8186;font-size:12px;margin-top:12px}
+.v7-section-side{display:grid;gap:16px}
+.v7-section-selector{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.v7-section-btn{border:1px solid #d9dddf;background:#fff;border-radius:6px;min-height:76px;padding:13px 14px;text-align:left;display:grid;grid-template-columns:34px 1fr 14px;align-items:center;gap:8px;cursor:pointer;transition:.18s ease}
+.v7-section-btn:hover{transform:translateY(-1px);border-color:#bbc1c5}.v7-section-btn.active{border-color:var(--v4-red);box-shadow:inset 3px 0 0 var(--v4-red);background:#fffafa}
+.v7-section-btn span{font-weight:900;color:var(--v4-red);font-size:16px}.v7-section-btn strong{font-size:13px;line-height:1.15}.v7-section-btn em{font-style:normal;font-size:22px;color:#92999e}
+.v7-summary{background:#fff;border:1px solid #dfe3e5;border-radius:8px;padding:28px 30px;box-shadow:0 12px 30px rgba(24,29,33,.055)}
+.v7-summary h3{font-size:29px;line-height:1.05;margin:10px 0}.v7-summary p{color:#626a70;line-height:1.5;margin:0 0 17px}
+.v7-summary ul{list-style:none;padding:16px 0 0;margin:0;border-top:1px solid #eceeef}.v7-summary li{position:relative;padding-left:24px;margin:10px 0;font-size:14px}.v7-summary li:before{content:"✓";position:absolute;left:0;color:var(--v4-red);font-weight:900}
+.v7-preview-cta{text-align:center;margin-top:30px}.v7-preview-cta span{display:block;color:#7b8287;font-size:12px;margin-top:10px}
+
+/* Mobile: full-width hero, then compact tap selector and locked report card */
+@media(max-width:900px){
+ .v7-hero-picture{max-width:none}
+ .v7-preview-intro{display:block}.v7-mini-proof{margin-top:18px}
+ .v7-preview-experience{grid-template-columns:1fr}
+ .v7-report-stage{position:static}
+ .v7-section-side{display:flex;flex-direction:column}
+ .v7-section-selector{display:flex;overflow-x:auto;gap:8px;scroll-snap-type:x mandatory;padding-bottom:4px;order:-1;scrollbar-width:none}
+ .v7-section-selector::-webkit-scrollbar{display:none}
+ .v7-section-btn{flex:0 0 190px;scroll-snap-align:start;grid-template-columns:30px 1fr 12px}
+ .v7-page{min-height:430px}
+}
+@media(max-width:560px){
+ .hero-final{background:#fff!important}
+ .v7-hero-picture img{width:100%;height:auto}
+ .chapters-section-v4{padding-top:54px!important}
+ .v7-preview-intro{margin-top:4px}
+ .v7-preview-intro p{font-size:15px}
+ .v7-mini-proof{min-width:0}
+ .v7-device{padding:8px;border-radius:8px}
+ .v7-page{min-height:370px;padding:35px 25px}
+ .v7-page h3{font-size:31px;max-width:280px}
+ .v7-page-num{font-size:48px;right:22px}
+ .v7-lock-overlay{width:84%;bottom:30px;padding:14px}
+ .v7-summary{padding:22px 20px}
+}
+</style>
+<style id="v8-fixes">
+/* -------- V8 HERO: recreated in HTML, not a stretched screenshot -------- */
+.hero-final{background:#f4f1eb!important;color:#171b1f}
+.v8-hero{background:linear-gradient(90deg,#fbfaf7 0%,#f5f2ec 48%,#e9e4dc 100%);overflow:hidden}
+.v8-hero-grid{display:grid;grid-template-columns:.82fr 1.18fr;min-height:610px;align-items:stretch}
+.v8-hero-copy{padding:58px 34px 48px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.v8-hero-copy .kicker{font-size:11px;color:#b5232a;margin-bottom:16px}
+.v8-hero-copy h1{font-size:clamp(58px,5.8vw,86px);line-height:.88;letter-spacing:-.055em;margin:0 0 22px;color:#15191d}
+.v8-hero-copy h1 span{color:#df2e35}
+.v8-verdict{display:grid;gap:2px;font-size:21px;line-height:1.08;margin-bottom:18px}
+.v8-verdict strong{font-weight:850}.v8-verdict .redline{color:#df2e35}
+.v8-hero-copy p{font-size:16px;line-height:1.5;color:#4f575d;max-width:560px;margin:0 0 24px}
+.v8-hero-cta{align-self:flex-start;font-size:17px;padding:17px 26px}
+.v8-hero-note{font-size:10px;letter-spacing:.12em;font-weight:800;color:#60686e;margin-top:13px}
+.v8-hero-visual{position:relative;min-width:0;overflow:hidden}
+.v8-hero-visual img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.v8-hero-visual:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#f5f2ec 0%,rgba(245,242,236,.58) 5%,rgba(245,242,236,0) 22%)}
+.v8-handnote{position:absolute;z-index:2;right:5%;top:9%;font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.25;color:#1e2327;transform:rotate(-5deg);border-bottom:3px solid #df2e35;padding-bottom:7px}
+
+/* -------- Preview: visibly show useful structure, then lock the deeper content -------- */
+.v7-page{padding:34px 36px 0!important;min-height:540px!important;background:#fbfaf7!important}
+.v8-report-head{display:flex;justify-content:space-between;align-items:start;gap:15px}
+.v8-report-label{font-size:11px;font-weight:900;letter-spacing:.13em;color:#555e64;margin-top:6px}
+.v8-preview-pill{background:#e8f0e9;color:#31583b;border:1px solid #cdddcf;border-radius:20px;padding:7px 10px;font-size:9px;font-weight:900;letter-spacing:.11em}
+.v7-page h3{margin-top:20px!important;margin-bottom:13px!important}
+.v8-visible-preview{position:relative;z-index:2}
+.v8-pullquote{font-size:20px;line-height:1.25;font-weight:800;max-width:460px;margin:20px 0 22px;color:#22282d}
+.v8-preview-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #dddeda;padding-top:18px}
+.v8-minihead{font-size:9px;font-weight:900;letter-spacing:.13em;color:#df2e35;margin-bottom:7px}
+.v8-preview-columns p{font-size:12px;line-height:1.45;color:#596168;margin:0}
+.v8-locked-content{position:relative;margin:24px -36px 0;min-height:175px;overflow:hidden;border-top:1px solid #dedfdb;background:#f1f0ec}
+.v8-blur-copy{padding:24px 35px;display:grid;gap:10px;filter:blur(4px);opacity:.4}
+.v8-blur-copy i{height:10px;background:#81888d;border-radius:2px}.v8-blur-copy i:nth-child(2){width:90%}.v8-blur-copy i:nth-child(3){width:76%}.v8-blur-copy i:nth-child(5){width:84%}
+.v8-lock-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72%;text-align:center;background:rgba(30,36,41,.95);color:#fff;padding:14px 18px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.v8-lock-symbol{font-size:21px;color:#ef5358}.v8-lock-card strong{display:block;font-size:10px;letter-spacing:.12em;margin:2px 0 5px}.v8-lock-card span{font-size:10px;line-height:1.35;color:#c9ced1}
+.v7-section-btn.active{background:#fff6f5!important}
+.v7-device-top em{font-weight:800}
+
+/* Remove any legacy accidental hero/nav duplication */
+.v7-hero-picture,.v6-device-hero,.hero-mobile-live,.hero-visual-wrap{display:none!important}
+
+@media(max-width:900px){
+ .v8-hero-grid{grid-template-columns:1fr;min-height:0}
+ .v8-hero-copy{padding:45px 0 32px}
+ .v8-hero-visual{height:auto;aspect-ratio:1.45/1}
+ .v8-hero-visual:before{background:linear-gradient(180deg,#f5f2ec 0%,rgba(245,242,236,0) 16%)}
+ .v8-handnote{font-size:16px;top:6%}
+}
+@media(max-width:560px){
+ .v8-hero-copy{padding:36px 0 26px}
+ .v8-hero-copy h1{font-size:clamp(48px,15vw,67px)}
+ .v8-verdict{font-size:18px}
+ .v8-hero-copy p{font-size:15px}
+ .v8-hero-visual{aspect-ratio:1.15/1}
+ .v8-handnote{display:none}
+ .v7-page{padding:27px 22px 0!important;min-height:510px!important}
+ .v8-preview-columns{grid-template-columns:1fr;gap:14px}
+ .v8-locked-content{margin-left:-22px;margin-right:-22px}
+ .v8-lock-card{width:84%}
+}
+</style>
+<style id="v9-design">
+/* Canonical report artwork */
+.canonical-report-cover{object-fit:contain!important}
+
+/* Hero digital device composition */
+.v8-hero-visual{background:linear-gradient(145deg,#ded9d0,#f2eee7);display:flex;align-items:center;justify-content:center;padding:42px 30px!important;overflow:hidden}
+.v9-device-scene{position:relative;width:100%;max-width:760px;min-height:500px;display:flex;align-items:center;justify-content:center}
+.v9-laptop{position:relative;width:82%;z-index:1}
+.v9-laptop-screen{aspect-ratio:16/10;background:#15191d;border:10px solid #252a2e;border-radius:12px 12px 6px 6px;padding:22px;display:grid;grid-template-columns:.72fr 1.28fr;gap:22px;align-items:center;box-shadow:0 26px 55px rgba(24,29,33,.22)}
+.v9-screen-cover{height:100%;display:flex;align-items:center;justify-content:center}
+.v9-screen-cover img{height:100%;max-height:320px;width:auto;max-width:100%;object-fit:contain;box-shadow:0 12px 26px rgba(0,0,0,.3)}
+.v9-screen-copy{color:#fff}.v9-screen-copy span{font-size:9px;letter-spacing:.16em;color:#e15156;font-weight:900}.v9-screen-copy strong{display:block;font-size:29px;line-height:1.02;margin:10px 0}.v9-screen-copy p{font-size:12px;line-height:1.5;color:#c6cbd0}
+.v9-laptop-base{height:16px;background:linear-gradient(#c6c6c4,#8e8f8e);margin:-1px -6% 0;border-radius:0 0 50% 50%;box-shadow:0 10px 15px rgba(0,0,0,.12)}
+.v9-phone{position:absolute;right:2%;bottom:52px;width:19%;aspect-ratio:.52/1;background:#161a1e;border:6px solid #25292d;border-radius:24px;padding:8px;z-index:3;box-shadow:0 18px 35px rgba(0,0,0,.28);overflow:hidden}
+.v9-phone img{width:100%;height:100%;object-fit:cover;border-radius:14px}.v9-phone-notch{position:absolute;z-index:2;top:6px;left:50%;transform:translateX(-50%);width:40%;height:10px;background:#171b1e;border-radius:0 0 8px 8px}
+.v9-digital-tag{position:absolute;left:8%;bottom:12px;background:#20262c;color:#fff;padding:10px 13px;font-size:9px;font-weight:900;letter-spacing:.12em;z-index:4}
+
+/* New preview experience */
+.v9-preview-intro{max-width:760px;margin:8px 0 30px}.v9-preview-intro p{font-size:17px;line-height:1.55;color:#626a70;margin:9px 0 0}
+.v9-preview-stage{display:grid;grid-template-columns:.78fr 1.22fr;gap:60px;align-items:center;background:#fff;border:1px solid #e0e3e4;border-radius:10px;padding:44px;box-shadow:0 20px 50px rgba(24,29,33,.07)}
+.v9-cover-column{text-align:center}.v9-cover-wrap{max-width:360px;margin:auto;position:relative}
+.v9-cover-wrap:before{content:"";position:absolute;inset:4% -5% -3% 7%;background:#dedbd4;border-radius:3px;transform:rotate(2deg)}
+.v9-cover-wrap img{position:relative;display:block;width:100%;height:auto;box-shadow:0 22px 45px rgba(24,29,33,.22);border-radius:2px}
+.v9-cover-caption{font-size:9px;font-weight:900;letter-spacing:.16em;color:#747c82;margin-top:22px}
+.v9-explore-kicker{font-size:10px;font-weight:900;letter-spacing:.15em;color:#df2e35}
+.v9-explore-column h3{font-size:38px;line-height:1.02;margin:10px 0 10px}.v9-explore-column>p{color:#646c72;line-height:1.5;max-width:560px}
+.v9-section-chips{display:flex;gap:7px;flex-wrap:wrap;margin:24px 0 22px}
+.v9-chip{width:42px;height:42px;border:1px solid #d5dadd;background:#fff;border-radius:50%;font-weight:900;color:#596168;cursor:pointer}.v9-chip.active{background:#20262c;color:#fff;border-color:#20262c}
+.v9-inline-overview{border-left:3px solid #df2e35;padding:4px 0 4px 20px;margin-bottom:24px}
+.v9-overview-count{font-size:11px;font-weight:900;color:#777f84;margin-bottom:8px}.v9-overview-count span{font-size:20px;color:#df2e35}
+.v9-inline-overview h4{font-size:24px;line-height:1.08;margin:7px 0}.v9-inline-overview p{color:#5f676d;line-height:1.5;margin:0}
+.v9-open-modal{border:0;cursor:pointer}.v9-small-note{font-size:11px;color:#7a8186;margin-top:9px}
+.v9-preview-cta{text-align:center;margin-top:28px}.v9-preview-cta span{display:block;color:#7b8287;font-size:12px;margin-top:10px}
+
+/* Modal */
+.v9-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:28px}
+.v9-modal.open{display:flex}.v9-modal-backdrop{position:absolute;inset:0;background:rgba(20,24,28,.72);backdrop-filter:blur(8px)}
+.v9-modal-panel{position:relative;z-index:2;width:min(100%,1040px);max-height:90vh;background:#fbfaf7;border-radius:12px;overflow:hidden;display:grid;grid-template-columns:320px 1fr;box-shadow:0 35px 90px rgba(0,0,0,.35)}
+.v9-modal-close{position:absolute;right:16px;top:14px;z-index:5;width:38px;height:38px;border:0;border-radius:50%;background:#fff;font-size:25px;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.v9-modal-cover{background:#20262c;padding:38px 34px;color:#fff;display:flex;flex-direction:column;justify-content:center}.v9-modal-cover img{width:100%;box-shadow:0 18px 38px rgba(0,0,0,.35)}.v9-modal-cover div{margin-top:20px}.v9-modal-cover strong{display:block;font-size:11px;letter-spacing:.12em}.v9-modal-cover span{display:block;color:#bfc5c8;font-size:11px;margin-top:4px}
+.v9-modal-content{padding:44px 48px;overflow-y:auto}.v9-modal-progress{font-weight:900;color:#df2e35;font-size:28px;margin-bottom:14px}.v9-modal-progress em{font-style:normal;color:#92999e;font-size:13px;margin-left:5px}
+.v9-modal-content h3{font-size:42px;line-height:1.02;margin:10px 0 28px;max-width:580px}
+.v9-modal-block{border-top:1px solid #dde1e3;padding:18px 0}.v9-modal-block span,.v9-takeaway span{display:block;font-size:9px;font-weight:900;letter-spacing:.14em;color:#df2e35;margin-bottom:7px}.v9-modal-block p{font-size:16px;line-height:1.55;color:#565f65;margin:0}
+.v9-takeaway{background:#f2eee7;padding:18px 20px;border-radius:6px;margin-top:4px}.v9-takeaway strong{font-size:17px;line-height:1.35}
+.v9-modal-nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin-top:26px}.v9-modal-nav>button{border:0;background:none;font-size:11px;font-weight:900;cursor:pointer;color:#30373c}.v9-dots{display:flex;justify-content:center;gap:6px}.v9-dots button{width:7px;height:7px;border-radius:50%;border:0;background:#c5c9cb;padding:0;cursor:pointer}.v9-dots button.active{background:#df2e35;width:20px;border-radius:5px}
+
+@media(max-width:900px){
+ .v9-device-scene{min-height:430px}.v9-laptop{width:88%}.v9-screen-copy strong{font-size:22px}
+ .v9-preview-stage{grid-template-columns:1fr;gap:34px;padding:34px}.v9-cover-wrap{max-width:300px}
+ .v9-modal-panel{grid-template-columns:230px 1fr}.v9-modal-content{padding:38px 32px}
+}
+@media(max-width:560px){
+ .v8-hero-visual{padding:22px 12px!important}.v9-device-scene{min-height:330px}.v9-laptop{width:94%}.v9-laptop-screen{border-width:6px;padding:12px;gap:12px}.v9-screen-copy strong{font-size:16px}.v9-screen-copy p{font-size:9px}.v9-phone{width:22%;right:0;bottom:38px}.v9-digital-tag{left:3%;font-size:8px}
+ .v9-preview-stage{padding:24px 18px;border-radius:8px}.v9-cover-wrap{max-width:230px}.v9-explore-column h3{font-size:31px}.v9-section-chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px}.v9-chip{flex:0 0 42px}
+ .v9-modal{padding:0}.v9-modal-panel{width:100%;height:100%;max-height:none;border-radius:0;display:block;overflow-y:auto}.v9-modal-cover{padding:20px;display:grid;grid-template-columns:82px 1fr;gap:16px;align-items:center}.v9-modal-cover img{width:82px}.v9-modal-cover div{margin:0}.v9-modal-content{padding:28px 22px 34px}.v9-modal-content h3{font-size:34px}.v9-modal-nav{position:sticky;bottom:0;background:#fbfaf7;padding:14px 0 4px}
+}
+</style>
+<style id="v10-hero-fix">
+.hero-final{
+  padding:0!important;
+  margin:0!important;
+  background:#f5f1e9!important;
+  overflow:hidden!important;
+}
+.v10-full-hero{
+  position:relative;
+  width:100%;
+  max-width:1812px;
+  margin:0 auto;
+  line-height:0;
+  background:#f5f1e9;
+}
+.v10-full-hero img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.v10-hero-click{
+  position:absolute;
+  left:3.6%;
+  top:74.6%;
+  width:30%;
+  height:10.4%;
+  z-index:3;
+  border-radius:8px;
+}
+.v8-hero,.v8-hero-grid,.v8-hero-copy,.v8-hero-visual,
+.v9-device-scene,.v7-hero-picture,.v6-device-hero,
+.hero-mobile-live,.hero-visual-wrap{
+  display:none!important;
+}
+@media(max-width:700px){
+  .v10-full-hero{
+    overflow:hidden;
+  }
+  .v10-full-hero img{
+    width:178%;
+    max-width:none;
+    transform:translateX(-1%);
+    transform-origin:left top;
+  }
+  .v10-hero-click{
+    left:6%;
+    top:75%;
+    width:54%;
+    height:10%;
+  }
+}
+</style>
+<style id="v11-polish">
+/* Deep black evidence sections + subtle report-inspired red grid */
+.evidence-section,.numbers.grid-bg{background-color:#101214!important;background-image:linear-gradient(rgba(210,46,46,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(210,46,46,.075) 1px,transparent 1px),radial-gradient(circle at 50% 0%,rgba(210,46,46,.10),transparent 42%)!important;background-size:38px 38px,38px 38px,100% 100%!important;color:#fff!important}
+.number-grid-v11{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.v11-stat-card{background:rgba(8,9,10,.90)!important;border:1px solid rgba(239,62,67,.23)!important;border-radius:8px;padding:28px 28px 26px!important;box-shadow:0 18px 50px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.025)}
+.v11-stat-card .trend-label{color:#a9adb0!important;letter-spacing:.16em;font-size:10px;font-weight:800}
+.v11-stat-top{display:flex;align-items:flex-end;justify-content:space-between;margin:22px 0 0}.v11-stat-top span{font-size:31px;color:#777d81;font-weight:900}.v11-stat-top b{font-size:56px;line-height:.9;color:#ef3e43}
+.v11-chart{height:150px;margin:4px 0 0;background-image:linear-gradient(rgba(239,62,67,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(239,62,67,.075) 1px,transparent 1px);background-size:36px 30px;border-bottom:1px solid rgba(255,255,255,.12);overflow:hidden}.v11-chart svg{width:100%;height:100%;overflow:visible}.v11-line{fill:none;stroke:#ef3e43;stroke-width:5;stroke-linecap:round}.v11-chart circle{fill:#ef3e43;stroke:#111315;stroke-width:3}.v11-axis{display:flex;justify-content:space-between;margin-top:8px;color:#777d81;font-size:9px;letter-spacing:.15em;font-weight:900}.v11-badge{display:inline-block;margin-top:14px;border:1px solid rgba(239,62,67,.35);padding:7px 9px;color:#ef5a5f;font-size:9px;font-weight:900;letter-spacing:.13em}.v11-stat-card p{color:#e7e9ea!important;margin-top:22px!important;line-height:1.45}.v11-stat-card small{color:#777d81!important}.v11-big-number{font-size:92px;line-height:1;color:#ef3e43;font-weight:900;margin:25px 0 14px}.v11-meter{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:8px 0 15px}.v11-meter i{height:12px;background:#25282a;border-radius:2px}.v11-meter i:first-child{background:#ef3e43}.v11-meter i:nth-child(2){background:linear-gradient(90deg,#ef3e43 10%,#25282a 10%)}.v11-one-in-five{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.v11-one-in-five b{font-size:12px}.v11-one-in-five span{font-size:11px;color:#777d81}
+
+/* Canonical cover: background removed by tight crop; never stretch it */
+.v11-clean-cover{object-fit:contain!important;object-position:center!important}
+
+/* Preview is visible without JavaScript; horizontal cards make the product tour obvious. */
+.chapters-section-v4{background:#f7f5f0!important}.v11-preview-stage{display:grid;grid-template-columns:320px minmax(0,1fr);gap:42px;margin-top:32px;align-items:start}.v11-report-sticky{position:sticky;top:105px;text-align:center}.v11-report-sticky img{display:block;width:100%;height:auto;max-height:520px;box-shadow:0 24px 55px rgba(0,0,0,.20);border-radius:2px}.v11-report-caption{font-size:9px;letter-spacing:.16em;font-weight:900;color:#777f84;margin-top:16px}.v11-report-sticky strong{display:block;margin-top:7px;font-size:13px}.v11-overview-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(310px,44%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 3px 20px;scrollbar-width:thin}.v11-section-card{scroll-snap-align:start;min-height:390px;background:#fff;border:1px solid #dddeda;border-radius:9px;padding:28px;display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(25,30,34,.06)}.v11-section-num{font-size:42px;font-weight:900;color:#df2e35;line-height:1}.v11-section-kicker{font-size:9px;letter-spacing:.14em;font-weight:900;color:#df2e35;margin-top:24px}.v11-section-card h4{font-size:26px;line-height:1.08;margin:8px 0 14px}.v11-section-card p{font-size:15px;line-height:1.55;color:#5e666c;margin:0}.v11-card-open{margin-top:auto;padding-top:24px;border:0;background:none;text-align:left;color:#20262c;font-size:10px;letter-spacing:.08em;font-weight:900;cursor:pointer}.v11-overview-track:after{content:'SWIPE →';position:sticky;right:0;align-self:end;background:#20262c;color:#fff;padding:8px 10px;border-radius:20px;font-size:9px;font-weight:900;letter-spacing:.12em}
+@media(max-width:900px){.number-grid-v11{grid-template-columns:1fr}.v11-preview-stage{grid-template-columns:1fr}.v11-report-sticky{position:relative;top:auto;max-width:250px;margin:auto}.v11-overview-track{grid-auto-columns:minmax(280px,82%)}}
+@media(max-width:560px){.v11-stat-card{padding:22px!important}.v11-stat-top b{font-size:48px}.v11-big-number{font-size:76px}.v11-preview-stage{gap:28px}.v11-report-sticky{max-width:210px}.v11-overview-track{grid-auto-columns:88%;margin-left:-2px}.v11-section-card{min-height:370px;padding:24px}}
+</style>
+<style id="v12-hero-restore">
+.hero-final{display:block!important;padding:0!important;margin:0!important;background:#f6f3ed!important;overflow:hidden!important}
+.v12-approved-hero{position:relative;width:100%;max-width:1812px;margin:0 auto;line-height:0;background:#f6f3ed}
+.v12-approved-hero img{display:block;width:100%;height:auto;object-fit:contain}
+.v12-hero-cta-hit{position:absolute;left:3.5%;top:74%;width:30%;height:11%;z-index:4;border-radius:8px}
+@media(max-width:700px){
+  .v12-approved-hero{overflow:hidden}
+  .v12-approved-hero img{width:178%;max-width:none;transform:translateX(-1%);transform-origin:left top}
+  .v12-hero-cta-hit{left:6%;top:74%;width:54%;height:11%}
+}
+</style>
+<style id="v12-sales-design">
+.v12-sales-section{
+  position:relative;overflow:hidden;color:#fff;padding:74px 0 62px;
+  background:
+    radial-gradient(circle at 78% 28%,rgba(205,39,45,.12),transparent 28%),
+    linear-gradient(rgba(211,44,49,.075) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(211,44,49,.075) 1px,transparent 1px),
+    #0b0d0f;
+  background-size:auto,40px 40px,40px 40px,auto;
+}
+.v12-sales-section:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.12),transparent 50%,rgba(0,0,0,.18))}
+.v12-sales-section .wrap{position:relative;z-index:2}
+.v12-sales-kicker{font-size:10px;letter-spacing:.17em;font-weight:900;color:#ef3e43;margin-bottom:13px}
+.v12-sales-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:54px;align-items:center}
+.v12-sales-copy h2{font-size:clamp(46px,5.1vw,72px);line-height:.93;letter-spacing:-.045em;margin:0 0 18px;color:#fff}
+.v12-sales-copy h2 span{color:#e5353b}
+.v12-sales-lede{font-size:17px;line-height:1.55;color:#d3d6d8;max-width:720px;margin:0 0 30px}
+.v12-value-list{display:grid;gap:12px;margin:0 0 30px}
+.v12-value{display:grid;grid-template-columns:50px 1fr;gap:15px;align-items:center}
+.v12-icon{height:50px;border:1px solid #30363a;border-radius:9px;background:#15191c;color:#ef3e43;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:inset 0 1px rgba(255,255,255,.03)}
+.v12-value strong{display:block;font-size:16px;margin-bottom:2px}.v12-value span{display:block;font-size:13px;color:#bfc4c7;line-height:1.35}
+.v12-sales-cta{display:block!important;text-align:center;max-width:600px;padding:18px 24px!important;font-size:16px!important;background:#ed2f36!important;box-shadow:0 10px 28px rgba(221,38,45,.18)}
+.v12-product-column{position:relative;min-height:620px;display:flex;align-items:flex-end;justify-content:center}
+.v12-report-product{position:relative;width:min(100%,405px);transform:perspective(1000px) rotateY(-5deg);transform-origin:center bottom}
+.v12-report-product img{position:relative;z-index:3;width:100%;height:auto;display:block;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.v12-report-pages{position:absolute;z-index:2;right:-13px;top:8px;bottom:5px;width:18px;background:repeating-linear-gradient(90deg,#d8d4cc 0 2px,#f1eee8 2px 4px);transform:skewY(1deg);box-shadow:8px 8px 20px rgba(0,0,0,.28)}
+.v12-report-shadow{position:absolute;left:8%;right:-8%;bottom:-24px;height:45px;background:rgba(0,0,0,.5);filter:blur(20px);border-radius:50%}
+.v12-price-seal{position:absolute;z-index:6;right:0;top:32px;width:126px;height:126px;border-radius:50%;background:#c9232a;border:5px solid #ef3e43;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.v12-price-seal span{font-size:12px;font-weight:900}.v12-price-seal strong{font-size:40px;line-height:.95}.v12-price-seal em{font-style:normal;font-size:8px;font-weight:900;margin-top:5px}
+.v12-trust-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;border-top:1px solid #24292d;margin-top:40px;padding-top:25px}
+.v12-trust-strip div{display:flex;align-items:center;justify-content:center;gap:9px;color:#d5d8da;font-size:12px}.v12-trust-strip b{font-size:24px;color:#fff}
+@media(max-width:900px){
+ .v12-sales-grid{grid-template-columns:1fr}.v12-product-column{min-height:0;max-width:420px;width:100%;margin:10px auto 0}
+ .v12-price-seal{right:-5px;top:20px}.v12-trust-strip{grid-template-columns:repeat(2,1fr);row-gap:18px}
+}
+@media(max-width:560px){
+ .v12-sales-section{padding:55px 0 45px;background-size:auto,30px 30px,30px 30px,auto}
+ .v12-sales-copy h2{font-size:44px}.v12-sales-lede{font-size:15px}
+ .v12-value{grid-template-columns:44px 1fr}.v12-icon{height:44px}
+ .v12-product-column{max-width:300px}.v12-price-seal{width:94px;height:94px;right:-10px}.v12-price-seal strong{font-size:31px}
+ .v12-trust-strip{grid-template-columns:1fr 1fr}.v12-trust-strip div{justify-content:flex-start}
+}
+</style>
+<style id="v13-surgical-system">
+:root{--ink:#111417;--muted:#626a72;--red:#df3036;--paper:#fff;--soft:#f6f4ef;--line:#d9dde0;--black:#0b0d0f}
+html,body{margin:0!important;padding:0!important;max-width:100%!important;overflow-x:hidden!important;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif!important;-webkit-font-smoothing:antialiased}
+body *{box-sizing:border-box}
+section,header,footer{width:100%;margin-left:0;margin-right:0}
+.surgical-wrap{width:min(1180px,calc(100% - 64px));margin:0 auto}
+.eyebrow{font-size:12px;line-height:1.2;letter-spacing:.15em;font-weight:750;text-transform:uppercase;color:#6a7075}.eyebrow.red{color:var(--red)}
+h1,h2,h3{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif!important;letter-spacing:-.035em}
+p{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif!important}
+.surgical-cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:16px 22px;font-weight:750;letter-spacing:-.015em}.surgical-cta.dark{background:#111;color:#fff}.surgical-cta.redbtn{background:var(--red);color:#fff}.surgical-cta.big{width:100%;font-size:17px;padding:19px 24px}
+/* HERO: preserve approved banner, clean drift only */
+.surgical-hero{position:relative;background:#fff!important;overflow:hidden!important}
+.surgical-hero .v12-approved-hero{background:#fff!important}
+.surgical-hero .v12-approved-hero:after{content:"";position:absolute;inset:auto auto 0 0;width:23%;height:34%;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.78) 52%,#fff 86%);z-index:3}
+/* Search demo */
+.customer-search-section{padding:90px 0;background:#f7f5f0!important}
+.search-story{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.search-copy h2{font-size:clamp(40px,4.4vw,64px);line-height:.98;margin:14px 0 24px}.search-copy p{font-size:19px;line-height:1.55;color:var(--muted)}.search-punch{color:var(--ink)!important;font-weight:650}
+.phone-demo{text-align:center}.phone-stage{position:relative;min-height:720px;display:flex;align-items:center;justify-content:center}.phone-frame{position:absolute;width:min(390px,90%);border:9px solid #16191c;border-radius:48px;overflow:hidden;background:#fff;box-shadow:0 28px 60px rgba(20,24,28,.18);transition:opacity .45s ease,transform .45s ease}.phone-frame img{width:100%;height:auto;display:block}.answer-state{opacity:0;transform:translateX(35px) scale(.97);pointer-events:none}.phone-demo.show-answer .ask-state{opacity:0;transform:translateX(-35px) scale(.97)}.phone-demo.show-answer .answer-state{opacity:1;transform:none}.typing-mask{position:absolute;left:7%;right:6%;top:43%;height:13.7%;background:#f1f1f1;border-radius:24px;text-align:left;padding:20px 19px;font-size:18px;line-height:1.35;color:#111}.cursor{color:#1688f5;animation:blink .8s infinite}.send-pulse{position:absolute;right:7%;top:51.4%;width:44px;height:44px;border:0;border-radius:50%;background:#0b84ff;color:#fff;font-size:28px;line-height:1;box-shadow:0 0 0 0 rgba(11,132,255,.45);animation:pulse 1.6s infinite}.demo-caption{display:flex;justify-content:center;align-items:center;gap:9px;margin:8px 0 18px;font-size:11px;letter-spacing:.08em}.demo-step{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#111;color:#fff;align-items:center;justify-content:center}.demo-arrow{color:var(--red);font-size:20px}.demo-toggle{border:1px solid #cfd3d6;background:#fff;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer}@keyframes blink{50%{opacity:0}}@keyframes pulse{70%{box-shadow:0 0 0 15px rgba(11,132,255,0)}}
+/* WOM */
+.objection-section-v4{padding:100px 0!important;background:#f7f5f0!important}.wom-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.wom-card{background:#fff;border:1px solid #d9d9d4;padding:42px;box-shadow:12px 12px 0 #e3e1db}.wom-tag{display:inline-block;background:#1d2226;color:#fff;padding:8px 11px;font-size:11px;font-weight:750;letter-spacing:.08em}.wom-card blockquote{margin:28px 0;font-size:clamp(30px,3vw,48px);line-height:1.02;font-weight:720;letter-spacing:-.04em}.wom-red{font-weight:750;color:var(--red);font-size:16px}.wom-copy h2{font-size:clamp(48px,5.5vw,76px);line-height:.92;margin:14px 0 28px}.wom-copy h2 span{color:var(--red)}.wom-copy p{font-size:18px;line-height:1.55;color:#555d63}.wom-statement{border-left:4px solid var(--red);padding:18px 22px;margin:28px 0;background:#fff}.wom-statement b,.wom-statement strong{display:block;font-size:28px}.wom-statement strong{color:var(--red)}
+/* Garbage */
+.garbage-section-v4{padding:100px 0!important;background:linear-gradient(rgba(213,42,48,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(213,42,48,.06) 1px,transparent 1px),#0d1012!important;background-size:40px 40px!important;color:#fff}.garbage-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.garbage-head h2{font-size:clamp(50px,5.8vw,82px);line-height:.9;margin:16px 0 24px}.garbage-head h2 span{color:var(--red)}.garbage-lede{font-size:20px;line-height:1.5;color:#c8cdd0}.garbage-points{display:grid;gap:0}.garbage-points>div{position:relative;padding:22px 0 22px 58px;border-bottom:1px solid #2b3034}.garbage-points b{position:absolute;left:0;top:23px;color:var(--red);font-size:15px}.garbage-points h3{font-size:22px;margin:0 0 7px;letter-spacing:-.02em}.garbage-points p{margin:0;color:#aeb5ba;line-height:1.45}.garbage-close{grid-column:1/-1;border-top:1px solid #30363a;margin-top:10px;padding-top:35px;display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center}.garbage-close h3{font-size:30px;margin:0}.garbage-close p{color:#c8cdd0;line-height:1.5}.garbage-close .surgical-cta{grid-column:2}
+/* Decision */
+.decision-section-v4{padding:100px 0!important;background:#fff!important}.decision-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:78px;align-items:center}.decision-product{position:relative;display:flex;justify-content:center}.decision-cover-wrap{position:relative;width:min(390px,88%);box-shadow:0 32px 70px rgba(0,0,0,.22)}.decision-cover-wrap img{width:100%;display:block}.cover-name-patch{position:absolute;left:8%;right:8%;bottom:8.5%;background:#0b0b0b;color:#fff;padding:9px 8px;text-align:center;font-size:9px;letter-spacing:.14em;line-height:1.3;border-top:1px solid #c82c31}.cover-name-patch b{font-size:12px}.price-orbit{position:absolute;right:0;top:7%;width:126px;height:126px;border-radius:50%;background:var(--red);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(0,0,0,.18)}.price-orbit small,.price-orbit span{font-size:9px;font-weight:750}.price-orbit strong{font-size:42px;line-height:1}.decision-copy h2{font-size:clamp(46px,5vw,70px);line-height:.95;margin:14px 0 28px}.decision-list{border-top:1px solid var(--line)}.decision-list>div{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.decision-list>b{}.decision-list div>b{color:var(--red);font-size:14px;padding-top:3px}.decision-list p{margin:0;color:#5e666d;line-height:1.45}.decision-list p strong{color:var(--ink);font-size:18px}.availability-note{margin:26px 0 14px;color:var(--red);font-size:12px;letter-spacing:.12em;font-weight:800}.microtrust{text-align:center;margin-top:13px;color:#747b81;font-size:10px;letter-spacing:.08em}
+/* Audio crop/container: do not alter Rob image */
+.audio-photo-fix .audio-photo,.audio-photo-fix .audio-image,.audio-photo-fix figure{overflow:hidden!important;border-radius:28px!important}.audio-photo-fix img{display:block!important;max-width:100%!important}
+/* Report/laptop alignment: constrain pasted art to screen-like boundaries where applicable */
+.chapters-section-v4 img{object-fit:contain!important;object-position:center!important}.chapters-section-v4 .device,.chapters-section-v4 .device-mockup{overflow:hidden!important}
+/* V12 sales naming + type */
+.v12-sales-section .v12-sales-copy h2{font-weight:720!important}.v12-sales-section .v12-sales-lede{font-weight:400!important}
+@media(max-width:900px){.surgical-wrap{width:min(100% - 36px,720px)}.search-story,.wom-grid,.garbage-grid,.decision-grid{grid-template-columns:1fr;gap:42px}.customer-search-section,.objection-section-v4,.garbage-section-v4,.decision-section-v4{padding:68px 0!important}.phone-stage{min-height:700px}.garbage-close{grid-template-columns:1fr}.garbage-close .surgical-cta{grid-column:1}.decision-product{order:2}.decision-copy{order:1}.price-orbit{right:5%}.surgical-hero .v12-approved-hero:after{width:30%;height:30%}}
+@media(max-width:600px){.surgical-wrap{width:calc(100% - 28px)}.search-copy h2,.wom-copy h2,.garbage-head h2,.decision-copy h2{font-size:40px;line-height:.96}.search-copy p,.wom-copy p{font-size:16px}.phone-stage{min-height:660px}.phone-frame{width:92%;border-width:6px;border-radius:38px}.typing-mask{font-size:15px;padding:14px 13px}.wom-card{padding:28px;box-shadow:7px 7px 0 #e3e1db}.wom-card blockquote{font-size:32px}.wom-statement b,.wom-statement strong{font-size:23px}.garbage-points>div{padding-left:44px}.garbage-points h3{font-size:19px}.decision-cover-wrap{width:78%}.price-orbit{width:102px;height:102px;right:3%}.price-orbit strong{font-size:34px}.surgical-cta{width:100%;text-align:center}.demo-caption{flex-wrap:wrap}.surgical-hero .v12-approved-hero:after{width:38%;height:28%}}
+</style>
+<style id="v14-clean-fixes">
+/* HERO — true white left side; no raster fade, no pink/red drift */
+.v14-hero{background:#fff!important;overflow:hidden!important;padding:0!important;position:relative}
+.v14-hero:before,.v14-hero:after,.v14-hero .v12-approved-hero:after{display:none!important}
+.v14-hero-inner{min-height:760px;display:grid;grid-template-columns:minmax(560px,1.04fr) minmax(460px,.96fr);background:#fff;position:relative}
+.v14-hero-copy{z-index:3;padding:72px 34px 64px max(48px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;background:#fff}
+.v14-hero-kicker{font-size:15px;letter-spacing:.105em;font-weight:800;color:#e13036;margin-bottom:20px}
+.v14-hero h1{margin:0 0 24px;font-size:clamp(68px,6.6vw,104px);line-height:.82;letter-spacing:-.065em}
+.v14-hero h1 span,.v14-hero h1 strong{display:block}
+.v14-hero h1 span{color:#080b0d;font-weight:850}
+.v14-hero h1 strong{color:#e51f2b;font-weight:850}
+.v14-hero-lines{display:grid;gap:1px;margin:0 0 24px}
+.v14-hero-lines b{font-size:clamp(25px,2.15vw,34px);line-height:1.12;letter-spacing:-.035em}
+.v14-hero-lines .red{color:#e13036}
+.v14-hero-copy>p{max-width:670px;font-size:18px;line-height:1.5;color:#4e565d;margin:0 0 26px}
+.v14-hero-cta{display:flex;width:min(620px,100%);min-height:68px;align-items:center;justify-content:center;background:#ed202b;color:#fff;text-decoration:none;border-radius:12px;font-size:20px;font-weight:800;box-shadow:0 14px 28px rgba(237,32,43,.16)}
+.v14-hero-trust{margin-top:16px;font-size:11px;letter-spacing:.13em;color:#687077;font-weight:650}.v14-hero-trust i{font-style:normal;margin:0 12px;color:#a5aaae}
+.v14-hero-photo{position:relative;overflow:hidden;background:#fff}
+.v14-hero-photo:before{content:"";position:absolute;z-index:2;left:-1px;top:0;bottom:0;width:25%;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 18%,rgba(255,255,255,.58) 57%,rgba(255,255,255,0) 100%);pointer-events:none}
+.v14-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center right;display:block}
+
+/* PHONE — deterministic crossfade; no flashing mask */
+.v14-phone-demo .phone-stage{min-height:720px}
+.v14-phone-demo .phone-frame{transition:opacity .55s ease,transform .55s ease!important;will-change:opacity,transform;backface-visibility:hidden}
+.v14-phone-demo .ask-state{opacity:1;transform:none;z-index:2}
+.v14-phone-demo .answer-state{opacity:0;transform:translateX(22px) scale(.985);z-index:1}
+.v14-phone-demo.show-answer .ask-state{opacity:0;transform:translateX(-22px) scale(.985);pointer-events:none}
+.v14-phone-demo.show-answer .answer-state{opacity:1;transform:none;z-index:3;pointer-events:auto}
+.v14-phone-demo .demo-step.active{background:#e13036}
+.v14-phone-demo.show-answer .demo-step{background:#111}
+.v14-phone-demo.show-answer .demo-step:last-of-type{background:#e13036}
+.v14-phone-demo .demo-toggle{min-width:190px}
+
+/* ROB — elevated editorial treatment */
+.v14-rob-section{padding:110px 0!important;background:#fff!important;position:relative;overflow:hidden}
+.v14-rob-section:after{content:"07";position:absolute;right:-20px;bottom:-100px;font-size:360px;font-weight:900;line-height:1;color:#f7f7f5;letter-spacing:-.08em;z-index:0}
+.v14-rob-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:86px;align-items:center;position:relative;z-index:1}
+.v14-rob-visual{position:relative;padding:22px 0 60px}
+.v14-rob-photo{width:min(430px,92%);aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:8px solid #0d1012;box-shadow:0 28px 70px rgba(12,16,18,.14)}
+.v14-rob-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.v14-rob-card{position:absolute;right:0;bottom:0;width:270px;background:#0d1012;color:#fff;padding:22px 24px;border-left:5px solid #e13036;box-shadow:0 18px 38px rgba(0,0,0,.18)}
+.v14-rob-card span{display:block;color:#e13036;font-size:10px;letter-spacing:.15em;font-weight:800;margin-bottom:7px}
+.v14-rob-card b{font-size:19px;line-height:1.05}.v14-rob-card p{font-size:13px;color:#bfc4c7;margin:8px 0 0;line-height:1.35}
+.v14-rob-copy h2{font-size:clamp(54px,5.4vw,80px);line-height:.91;margin:14px 0 28px;letter-spacing:-.055em}
+.v14-rob-copy h2 span{color:#e13036}
+.v14-rob-copy p{font-size:18px;line-height:1.55;color:#555e65;margin:0 0 20px}
+.v14-rob-copy .lead{font-size:21px;color:#41484e}
+.v14-rob-rule{width:72px;height:4px;background:#e13036;margin:28px 0}
+.v14-rob-copy blockquote{margin:30px 0;padding:22px 0 22px 24px;border-left:4px solid #e13036;font-size:20px;line-height:1.45;font-weight:680;color:#171b1e}
+.v14-signoff{display:flex;flex-direction:column;gap:3px;margin-top:24px}.v14-signoff strong{font-size:24px}.v14-signoff span{font-size:13px;color:#7b8389}
+
+/* Edge-to-edge and mobile */
+@media(max-width:900px){
+  .v14-hero-inner{grid-template-columns:1fr;min-height:auto}
+  .v14-hero-copy{padding:54px 24px 44px}
+  .v14-hero h1{font-size:clamp(58px,14vw,88px)}
+  .v14-hero-photo{height:390px}
+  .v14-hero-photo:before{left:0;right:0;top:-1px;width:auto;height:34%;bottom:auto;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.7) 45%,rgba(255,255,255,0) 100%)}
+  .v14-hero-trust{text-align:center;line-height:1.8}
+  .v14-rob-grid{grid-template-columns:1fr;gap:42px}
+  .v14-rob-visual{max-width:520px;margin:auto;width:100%}
+  .v14-rob-section{padding:72px 0!important}
+}
+@media(max-width:600px){
+  .v14-hero-copy{padding:42px 18px 34px}
+  .v14-hero-kicker{font-size:11px}
+  .v14-hero h1{font-size:56px}
+  .v14-hero-lines b{font-size:23px}
+  .v14-hero-copy>p{font-size:16px}
+  .v14-hero-cta{font-size:17px;min-height:60px}
+  .v14-hero-photo{height:300px}
+  .v14-phone-demo .phone-stage{min-height:660px}
+  .v14-rob-photo{width:82%}
+  .v14-rob-card{width:230px;padding:18px 20px}
+  .v14-rob-copy h2{font-size:44px}
+  .v14-rob-copy .lead{font-size:18px}
+  .v14-rob-copy p{font-size:16px}
+}
+</style>
+<style id="v15-polish-fixes">
+/* CONSULT PHOTO — show the complete approved image cleanly. No top crop, no zoom. */
+.v15-audio-fixed{overflow:visible!important}
+.v15-audio-fixed .audio-card,
+.v15-audio-fixed .audio-visual,
+.v15-audio-fixed .audio-photo,
+.v15-audio-fixed .audio-image,
+.v15-audio-fixed figure{
+  overflow:hidden!important;
+  border-radius:28px!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+}
+.v15-audio-fixed .v15-consult-photo{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+  transform:none!important;
+  scale:1!important;
+  margin:0!important;
+}
+
+/* THREE DECISIONS — remove the pasted-together composite graphic entirely. */
+.decision-section-v4 .decision-product{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:0!important;
+}
+.v15-product-stage{
+  position:relative;
+  width:min(430px,92%);
+  padding:28px 46px 46px 18px;
+  margin:auto;
+}
+.v15-report-cover{
+  position:relative;
+  width:100%;
+  background:#0b0d0f;
+  box-shadow:0 34px 70px rgba(12,16,18,.20);
+  overflow:hidden;
+}
+.v15-report-cover>img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+}
+.v15-cover-label{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  background:rgba(8,10,12,.96);
+  color:#fff;
+  padding:13px 16px 14px;
+  text-align:center;
+  border-top:2px solid #df3036;
+}
+.v15-cover-label small{
+  display:block;
+  font-size:9px;
+  line-height:1.1;
+  letter-spacing:.18em;
+  font-weight:700;
+  color:#d7dade;
+  margin-bottom:4px;
+}
+.v15-cover-label strong{
+  display:block;
+  font-size:15px;
+  line-height:1.15;
+  letter-spacing:.08em;
+}
+.v15-price-card{
+  position:absolute;
+  right:0;
+  bottom:10px;
+  width:150px;
+  min-height:150px;
+  border-radius:18px;
+  background:#df3036;
+  color:#fff;
+  box-shadow:0 18px 38px rgba(223,48,54,.25);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:16px 12px;
+}
+.v15-price-card span,.v15-price-card small{
+  font-size:8px;
+  letter-spacing:.11em;
+  font-weight:800;
+}
+.v15-price-card strong{
+  font-size:48px;
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin:6px 0;
+}
+.v15-price-card b{
+  font-size:10px;
+  line-height:1.2;
+  margin-bottom:5px;
+}
+
+/* Hide old V13/V14 product decoration if any survived. */
+.decision-section-v4 .price-orbit,
+.decision-section-v4 .cover-name-patch{display:none!important}
+
+@media(max-width:900px){
+  .v15-product-stage{width:min(390px,88%);padding-right:36px}
+}
+@media(max-width:600px){
+  .v15-product-stage{width:min(330px,92%);padding:18px 28px 38px 6px}
+  .v15-price-card{width:124px;min-height:124px;right:0;bottom:5px}
+  .v15-price-card strong{font-size:40px}
+  .v15-cover-label strong{font-size:12px}
+}
+</style>
+<style id="v16-search-punch">
+.customer-search-section .search-story{
+  grid-template-columns:.92fr 1.08fr!important;
+  gap:64px!important;
+}
+.v16-search-head{
+  font-size:clamp(48px,5vw,72px)!important;
+  line-height:.91!important;
+  margin:14px 0 26px!important;
+  letter-spacing:-.055em!important;
+}
+.v16-search-head span{color:#df3036}
+.v16-search-lede{
+  font-size:21px!important;
+  line-height:1.42!important;
+  color:#1a1e21!important;
+  margin-bottom:18px!important;
+}
+.v16-search-lede strong{font-weight:760}
+.v16-question-shift{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:14px;
+  align-items:center;
+  margin:28px 0;
+  padding:18px 0;
+  border-top:1px solid #d6d8d9;
+  border-bottom:1px solid #d6d8d9;
+}
+.v16-question-shift>div{display:grid;gap:6px}
+.v16-question-shift small,
+.v16-ai-recommends small{
+  font-size:9px;
+  line-height:1.1;
+  letter-spacing:.15em;
+  font-weight:800;
+  color:#7a8186;
+}
+.v16-question-shift b{
+  font-size:15px;
+  line-height:1.3;
+  letter-spacing:-.015em;
+}
+.v16-question-shift>span{
+  color:#df3036;
+  font-size:24px;
+  font-weight:800;
+}
+.v16-ai-recommends{
+  background:#101315;
+  color:#fff;
+  padding:22px 24px;
+  border-left:5px solid #df3036;
+  margin:28px 0 22px;
+}
+.v16-ai-recommends small{
+  display:block;
+  color:#aeb4b8;
+  margin-bottom:8px;
+}
+.v16-ai-recommends strong{
+  display:block;
+  font-size:25px;
+  line-height:1.05;
+  letter-spacing:-.03em;
+}
+.v16-ai-recommends strong span{color:#ef353b}
+.v16-loss-line{
+  color:#252a2e!important;
+  font-size:18px!important;
+  line-height:1.45!important;
+  margin-bottom:16px!important;
+}
+.v16-loss-line strong{color:#df3036}
+.v16-watch{
+  display:inline-block;
+  color:#df3036;
+  font-size:11px;
+  letter-spacing:.14em;
+  font-weight:850;
+}
+@media(max-width:900px){
+  .customer-search-section .search-story{grid-template-columns:1fr!important}
+}
+@media(max-width:600px){
+  .v16-search-head{font-size:44px!important}
+  .v16-search-lede{font-size:18px!important}
+  .v16-question-shift{grid-template-columns:1fr;gap:10px}
+  .v16-question-shift>span{transform:rotate(90deg);justify-self:start}
+  .v16-ai-recommends strong{font-size:22px}
+}
+</style>
+
+
+
+<style id="v19-locked-modal">
+.v19-modal-shell{position:fixed;inset:0;z-index:999999;display:none;align-items:center;justify-content:center;padding:18px}
+.v19-modal-shell.open{display:flex}
+.v19-backdrop{position:absolute;inset:0;background:rgba(5,8,10,.72);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+.v19-modal-card{position:relative;z-index:2;width:min(1410px,96vw);aspect-ratio:1410/941}
+.v19-modal-art{display:block;width:100%;height:100%;object-fit:fill;border-radius:28px;box-shadow:0 36px 110px rgba(0,0,0,.34)}
+.v19-close-hotspot{position:absolute;right:1.1%;top:1.3%;width:5%;height:7%;border:0;background:transparent;cursor:pointer}
+.v19-form-overlay{position:absolute;inset:0;pointer-events:none}
+.v19-form-overlay input:not([type=checkbox]),.v19-stripe-hotspot,.v19-consent{position:absolute;pointer-events:auto;background:transparent;border:0;outline:0;color:transparent;caret-color:#111;font-size:16px}
+.v19-form-overlay input:not([type=checkbox]):focus{box-shadow:0 0 0 3px rgba(30,115,210,.18);border-radius:8px}
+.v19-first{left:57.1%;top:33.1%;width:18.6%;height:8.4%}
+.v19-last{left:77.0%;top:33.1%;width:18.4%;height:8.4%}
+.v19-email{left:57.1%;top:42.9%;width:38.3%;height:8.3%}
+.v19-phone{left:57.1%;top:52.4%;width:38.3%;height:8.3%}
+.v19-consent{left:57.0%;top:63.5%;width:2.2%;height:3.2%;opacity:.01;cursor:pointer}
+.v19-stripe-hotspot{left:57.0%;top:82.3%;width:38.5%;height:8.6%;cursor:pointer}
+body.v19-modal-open{overflow:hidden}
+@media(max-width:700px){
+ .v19-modal-shell{padding:6px;align-items:flex-start;overflow:auto}
+ .v19-modal-card{width:1120px;min-width:1120px;margin:20px 0;transform-origin:top left}
+}
+</style>
+</head>
+<body><div class="topbar">
+<div class="topbar-in">
+<div class="topbrand">THE REAL AI TRUTH REPORT <span>· The investigation for small-business owners</span></div>
+<a class="cta bar js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE REPORT <span class="pricepill">$17</span></a>
+</div>
+</div>
+<header class="hero-final v14-hero">
+<div class="v14-hero-inner">
+<div class="v14-hero-copy">
+<div class="v14-hero-kicker">CONTRACTORS &amp; SMALL-BUSINESS OWNERS</div>
+<h1><span>AI JUST TOOK</span><strong>ANOTHER<br/>CUSTOMER.</strong></h1>
+<div class="v14-hero-lines">
+<b>She needed what you sell.</b>
+<b>She was ready to buy.</b>
+<b>She asked AI who to call.</b>
+<b class="red">It didn't say your name.</b>
+</div>
+<p>The <strong>Real AI Truth Report</strong> investigates how customers are changing the way they find local businesses, what the real data shows, what the AI hype gets wrong — and what you should do first.</p>
+<a class="v14-hero-cta js-open-checkout" data-checkout-modal="true" href="#checkout">GET INSTANT ACCESS — $17 →</a>
+<div class="v14-hero-trust">INSTANT ACCESS <i>•</i> NO SUBSCRIPTION <i>•</i> READ IT ANYWHERE</div>
+</div>
+<div aria-hidden="true" class="v14-hero-photo">
+<img alt="" src="assets/asset-01.jpg"/>
+</div>
+</div>
+</header>
+<div class="receipt-strip">
+<div class="wrap receipt-in">
+<div class="receipt"><b>Not a PDF dump</b><span>An interactive report built to be read, not buried in Downloads.</span></div>
+<div class="receipt"><span>The report includes the evidence that cuts against the hype too.</span></div>
+<div class="receipt"><b>Not a course</b><span>Get the point, understand the shift, know what deserves action.</span></div>
+<div class="receipt"><b>Not a subscription</b><span>$17 once. Instant access to the complete report.</span></div>
+</div>
+</div>
+<section class="intro-section" style="padding:54px 0;background:
+radial-gradient(ellipse at 70% 45%,rgba(217,47,53,.30),transparent 34%),
+linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),
+#0a0a0a;background-size:auto,42px 42px,42px 42px,auto;color:#fff;border-top:1px solid #242424;border-bottom:1px solid #242424">
+<div class="wrap" style="display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center">
+<div>
+<div class="kicker">The investigation starts here</div>
+<div style="font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.02;letter-spacing:-.045em">YOUR NEXT CUSTOMER MAY NEVER <span class="red">VISIT YOUR WEBSITE.</span></div>
+<div style="margin-top:12px;color:#c7c7c7;max-width:760px">She may ask one question, get one answer and make one call. The report shows you what that shift means before you spend money chasing the wrong AI solution.</div>
+</div>
+<a class="cta big js-open-checkout" data-checkout-modal="true" href="#checkout">SEE THE EVIDENCE — $17 →</a>
+</div>
+</section>
+<section class="customer-search-section">
+<div class="surgical-wrap search-story">
+<div class="search-copy">
+<div class="eyebrow">CUSTOMER SEARCH · TODAY</div>
+<h2 class="v16-search-head">YOUR NEXT REFERRAL <span>MAY NEVER HAPPEN.</span></h2>
+<p class="v16-search-lede"><strong>Customers aren't just asking friends and neighbors anymore.</strong><br/>
+Every day, they're asking AI who to call.</p>
+<p>The data is moving in one direction: more consumers are using AI to research businesses, compare options and help make buying decisions.</p>
+<div class="v16-question-shift">
+<div>
+<small>THE OLD QUESTION</small>
+<b>“Do you know a good plumber?”</b>
+</div>
+<span>→</span>
+<div>
+<small>THE NEW QUESTION</small>
+<b>“Who is the most reliable plumber near me?”</b>
+</div>
+</div>
+<div class="v16-ai-recommends">
+<small>HERE'S THE PART THAT MATTERS</small>
+<strong>AI DOESN'T JUST ANSWER.<br/><span>IT RECOMMENDS SOMEONE.</span></strong>
+</div>
+<p class="v16-loss-line">If your business isn't in that answer, <strong>the referral may go to somebody else.</strong></p>
+<div class="v16-watch">WATCH IT HAPPEN →</div>
+</div>
+<div class="phone-demo v14-phone-demo" data-state="ask">
+<div class="phone-stage">
+<div class="phone-frame ask-state">
+<img alt="ChatGPT prompt asking for the most reliable plumber near me" src="assets/asset-02.png"/>
+</div>
+<div aria-hidden="true" class="phone-frame answer-state">
+<img alt="ChatGPT recommending a local plumbing business with map and business listing" src="assets/asset-03.png"/>
+</div>
+</div>
+<div class="demo-caption">
+<span class="demo-step active">1</span><b class="demo-label">ASK CHATGPT</b>
+<span class="demo-arrow">→</span>
+<span class="demo-step">2</span><b>SEE WHO IT RECOMMENDS</b>
+</div>
+<button class="demo-toggle" type="button">SHOW THE ANSWER →</button>
+</div>
+</div></section>
+<section class="numbers grid-bg evidence-section">
+<div class="wrap">
+<div class="kicker">The evidence that made the report</div>
+<h2>YOU DON'T HAVE TO BELIEVE ME.<br/><span class="red">START WITH THE NUMBERS.</span></h2>
+<div class="number-grid number-grid-v11">
+<article class="number v11-stat-card">
+<div class="trend-label">CONSUMER AI ADOPTION</div>
+<div class="v11-stat-top"><span>6%</span><b>45%</b></div>
+<div aria-label="Consumer AI adoption increased from 6 percent to 45 percent" class="v11-chart">
+<svg aria-hidden="true" role="img" viewbox="0 0 360 155">
+<defs><lineargradient id="v11fill1" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ef3e43" stop-opacity=".35"></stop><stop offset="100%" stop-color="#ef3e43" stop-opacity="0"></stop></lineargradient></defs>
+<path class="v11-area" d="M18 132 C70 128, 108 120, 145 108 S220 88, 258 66 S320 35, 342 20 L342 145 L18 145 Z" fill="url(#v11fill1)"></path>
+<path class="v11-line" d="M18 132 C70 128, 108 120, 145 108 S220 88, 258 66 S320 35, 342 20"></path>
+<circle cx="18" cy="132" r="5"></circle><circle cx="342" cy="20" r="7"></circle>
+</svg>
+</div>
+<div class="v11-axis"><span>THEN</span><span>NOW</span></div>
+<p>Consumers using AI tools to pick a local business.</p><small>BrightLocal, 2026</small>
+</article>
+<article class="number v11-stat-card">
+<div class="trend-label">SMALL-BUSINESS AI ADOPTION</div>
+<div class="v11-stat-top"><span>48%</span><b>77%</b></div>
+<div aria-label="Small-business AI adoption increased from 48 percent to 77 percent" class="v11-chart">
+<svg aria-hidden="true" role="img" viewbox="0 0 360 155">
+<defs><lineargradient id="v11fill2" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ef3e43" stop-opacity=".35"></stop><stop offset="100%" stop-color="#ef3e43" stop-opacity="0"></stop></lineargradient></defs>
+<path class="v11-area" d="M18 128 C76 124, 110 112, 150 100 S224 78, 270 55 S320 32, 342 18 L342 145 L18 145 Z" fill="url(#v11fill2)"></path>
+<path class="v11-line" d="M18 128 C76 124, 110 112, 150 100 S224 78, 270 55 S320 32, 342 18"></path>
+<circle cx="18" cy="128" r="5"></circle><circle cx="342" cy="18" r="7"></circle>
+</svg>
+</div>
+<div class="v11-axis"><span>THEN</span><span>NOW</span></div>
+<div class="v11-badge">+29 POINTS IN ONE YEAR</div>
+<p>Small businesses using AI in a single year.</p><small>Intuit / U.S. Chamber, 2026</small>
+</article>
+<article class="number v11-stat-card v11-search-card">
+<div class="trend-label">HOMEOWNER SEARCH BEHAVIOR</div>
+<div class="v11-big-number">22%</div>
+<div class="v11-meter"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="v11-one-in-five"><b>MORE THAN 1 IN 5</b><span>start with AI before Google</span></div>
+<p>Homeowners going to an AI tool first — before Google — when they need a contractor.</p><small>Scorpion, 2026</small>
+</article>
+</div>
+<div class="receipts-line">The report goes deeper — and shows you the evidence that <em>didn't</em> survive scrutiny too.</div>
+<div class="center" style="margin-top:30px"><a class="cta big white js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE RECEIPTS <span class="pricepill">$17</span></a></div>
+</div>
+</section>
+<section class="preview-section">
+<div class="wrap">
+<div class="preview-head">
+<div><div class="kicker">Look inside before you pay me</div><h2>THIS ISN'T 20 PAGES OF <span class="red">GENERIC AI GARBAGE.</span></h2></div>
+<div class="preview-note">The finished report is a visual case file: evidence, source-backed claims, Rob's case notes, interactive elements, the cost-of-waiting logic and the chapter that challenges the AI sales pitch itself.</div>
+</div>
+<div class="preview-grid">
+<div class="panel darkp a"><div><div class="lab">Evidence 01 · Platform Shift</div><h3>This has happened before. You just didn't see it coming last time either.</h3><div class="platform"><span>Yellow Pages</span><i>→</i><span>Website</span><i>→</i><span>Google</span><i>→</i><span>Mobile</span><i>→</i><span style="border-color:#d42e2e;color:#fff">AI</span></div></div><div class="case-note">ROB'S CASE NOTE · The platform changes. The owner's reaction usually doesn't.</div></div>
+<div class="panel paperp b"><div class="lab">Evidence 02 · Adoption</div><div class="big">48% → 77%</div><h3>“AI adoption is coming.” No. It already came.</h3><p>The report separates actual adoption data from the futuristic claims being thrown around online.</p></div>
+<div class="panel whitep c"><div class="lab">Evidence 05 · Trust Transfer</div><h3>Yesterday → Today</h3><div class="today"><div>Ask a neighbor</div><b>→</b><div class="now">Ask AI</div></div></div>
+<div class="panel darkp d"><div class="lab">Evidence 06</div><h3>The Cost of Waiting</h3><div class="big">$ ?</div><p>Your calls. Your close rate. Your ticket. Your number.</p></div>
+<div class="panel darkp e"><div class="lab">Evidence 07 · GARBAGE Filter</div><h3>The chapter every AI salesman hopes you skip.</h3><p>Failure rates. Cancelled projects. Claims that didn't hold up. The other side of the ledger is in the report too.</p><div class="case-note">IF THE EVIDENCE DIDN'T HOLD UP, IT DIDN'T GET A FREE PASS.</div></div>
+</div>
+<div class="center" style="margin-top:38px"><a class="cta big js-open-checkout" data-checkout-modal="true" href="#checkout">OPEN THE FULL CASE FILE — $17 →</a></div>
+</div>
+</section>
+<section class="objection objection-section-v4">
+<div class="surgical-wrap wom-grid">
+<div class="wom-card">
+<div class="wom-tag">THE ARGUMENT WE HEAR ALL THE TIME</div>
+<blockquote>“I get all my business from word of mouth. I don't need this.”</blockquote>
+<div class="wom-red">That worked. But the way people ask for a recommendation is changing.</div>
+</div>
+<div class="wom-copy">
+<div class="eyebrow">THE REFERRAL DIDN'T DISAPPEAR. THE SOURCE CHANGED.</div>
+<h2>STOP RELYING ON <span>JUST WORD OF MOUTH.</span></h2>
+<p>For years, a homeowner needed a plumber and called a neighbor, friend or family member. Today, more customers are reaching into their pocket and asking AI the question instead.</p>
+<div class="wom-statement"><b>PEOPLE REFER.</b><strong>AI RECOMMENDS.</strong></div>
+<p>You may have built your business on referrals because they worked — and because you didn't need to spend heavily on advertising. But your reviews, reputation, website and local presence are increasingly becoming inputs into an AI-generated answer.</p>
+<p><strong>Word of mouth still matters.</strong> Relying on it alone is no longer a complete customer-acquisition strategy. You need to understand where customers are asking now — and whether your business makes the answer.</p>
+<a class="surgical-cta dark js-open-checkout" data-checkout-modal="true" href="#checkout">SEE WHAT CHANGED — $17 →</a>
+</div>
+</div></section>
+<section class="rob v14-rob-section">
+<div class="surgical-wrap v14-rob-grid">
+<div class="v14-rob-visual">
+<div class="v14-rob-photo"><img alt="Rob Pickering" src="assets/asset-04.jpg"/></div>
+<div class="v14-rob-card">
+<span>WHY I BUILT IT</span>
+<b>TO SLOW DOWN THE NOISE.</b>
+<p>Not to sell you the next shiny AI thing.</p>
+</div>
+</div>
+<div class="v14-rob-copy">
+<div class="eyebrow red">WHY I BUILT THE REAL AI TRUTH REPORT</div>
+<h2>I'M ROB.<br/><span>I GOT TIRED OF THE AI GARBAGE TOO.</span></h2>
+<p class="lead">Small-business owners are getting hit from both sides: <strong>“AI is going to destroy everything”</strong> or <strong>“AI is overhyped — ignore it.”</strong> Neither answer is useful when you're trying to run a real business.</p>
+<div class="v14-rob-rule"></div>
+<p>I wanted to know what actually held up. What's really changing? Which numbers matter? What should a contractor care about — and what can safely be ignored?</p>
+<p><strong>So I went through the research and put the evidence in one place.</strong> The uncomfortable data. The counter-evidence. The hype that doesn't hold up. And the practical changes that actually deserve your attention.</p>
+<blockquote>“Before you spend obnoxious money chasing the next AI thing, understand the facts, understand your goals, and decide what can actually be measured.”</blockquote>
+<div class="v14-signoff"><strong>— Rob Pickering</strong><span>Founder, ThirdShift Technologies</span></div>
+</div>
+</div>
+</section>
+<section class="soft chapters-section-v4">
+<div class="wrap">
+<div class="kicker">The complete case file</div>
+<h2>EIGHT SECTIONS.<br/><span class="red">ONE JOB: MAKE YOU UNDERSTAND WHAT CHANGED.</span></h2>
+<div class="center" style="margin-top:34px"></div>
+<div class="v9-preview-intro">
+<div>
+<div class="kicker">EXPLORE WHAT'S INSIDE</div>
+<p>Eight focused sections. Tap through the overview to see what each one investigates, why it matters, and what you'll understand — without giving away the report itself.</p>
+</div>
+</div>
+<div class="v11-preview-stage">
+<div class="v11-report-rail">
+<div class="v11-report-sticky"><img alt="AI Just Took Another Customer — The Real AI Truth Report" class="v11-clean-cover" src="assets/asset-05.jpg"/><div class="v11-report-caption">THE ACTUAL REPORT</div><strong>Explore all 8 sections →</strong></div>
+</div>
+<div class="v11-overview-track"><article class="v11-section-card"><div class="v11-section-num">01</div><div class="v11-section-kicker">The platform-shift pattern</div><h4>This has happened before.</h4><p>See how Yellow Pages, websites, Google and now conversational search fit the same recurring pattern — and why recognizing the pattern matters before deciding what to change.</p><button class="v11-card-open" data-v11-index="0" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">02</div><div class="v11-section-kicker">What adoption really looks like</div><h4>AI adoption already came.</h4><p>Separate real consumer and small-business adoption signals from futuristic predictions so you can judge how much attention the shift deserves right now.</p><button class="v11-card-open" data-v11-index="1" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">03</div><div class="v11-section-kicker">The customer-discovery shift</div><h4>The way people find a contractor changed.</h4><p>Understand how AI answers are becoming part of the path from a customer question to a local-business recommendation — sometimes before a website visit ever happens.</p><button class="v11-card-open" data-v11-index="2" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">04</div><div class="v11-section-kicker">The new competitive playbook</div><h4>A new competitor is coming.</h4><p>See why AI-native operators may build sales, service and marketing systems differently — and where established habits can become a disadvantage.</p><button class="v11-card-open" data-v11-index="3" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">05</div><div class="v11-section-kicker">Trust, referrals &amp; word of mouth</div><h4>“Word of mouth” isn’t a strategy.</h4><p>Explore how reputation still drives decisions while the way that reputation gets discovered, interpreted and transferred is changing.</p><button class="v11-card-open" data-v11-index="4" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">06</div><div class="v11-section-kicker">The real math on missed opportunity</div><h4>The math on missed calls.</h4><p>Use your own close rate, ticket size and business economics to think about missed opportunities instead of relying on generic scare-math.</p><button class="v11-card-open" data-v11-index="5" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">07</div><div class="v11-section-kicker">The garbage filter</div><h4>The chapter every AI salesman hopes you skip.</h4><p>Look at failures, overpromises and claims that do not survive scrutiny so a real market shift does not become an excuse to buy bad technology.</p><button class="v11-card-open" data-v11-index="6" type="button">VIEW SECTION OVERVIEW →</button></article><article class="v11-section-card"><div class="v11-section-num">08</div><div class="v11-section-kicker">A practical decision framework</div><h4>What you actually do next.</h4><p>Finish with practical next steps and a clearer way to decide what matters now, what can wait and where AI may actually help.</p><button class="v11-card-open" data-v11-index="7" type="button">VIEW SECTION OVERVIEW →</button></article></div>
+</div>
+<div aria-hidden="true" class="v9-modal" id="v9Modal">
+<div class="v9-modal-backdrop" data-v9-close=""></div>
+<div aria-label="Explore the eight sections" aria-modal="true" class="v9-modal-panel" role="dialog">
+<button aria-label="Close" class="v9-modal-close" data-v9-close="" type="button">×</button>
+<div class="v9-modal-cover">
+<img alt="AI Just Took Another Customer — The Real AI Truth Report" class="v11-clean-cover" src="assets/asset-05.jpg"/>
+<div><strong>THE REAL AI TRUTH REPORT</strong><span>Section overview</span></div>
+</div>
+<div class="v9-modal-content">
+<div class="v9-modal-progress">
+<span id="v9ModalNum">01</span><em>/ 08</em>
+</div>
+<div class="kicker" id="v9ModalEyebrow">THE PLATFORM-SHIFT PATTERN</div>
+<h3 id="v9ModalTitle">This has happened before.</h3>
+<div class="v9-modal-block">
+<span>WHAT THIS SECTION COVERS</span>
+<p id="v9ModalOverview">A look at the major changes that have reshaped how local customers find businesses — and why AI belongs in that same conversation.</p>
+</div>
+<div class="v9-modal-block">
+<span>WHY IT MATTERS</span>
+<p id="v9ModalImportance">It gives contractors historical context before asking them to make any decision about AI.</p>
+</div>
+<div class="v9-takeaway">
+<span>THE TAKEAWAY</span>
+<strong id="v9ModalTakeaway">Understand the pattern first. Then decide what deserves action.</strong>
+</div>
+<div class="v9-modal-nav">
+<button id="v9Prev" type="button">← PREVIOUS</button>
+<div class="v9-dots" id="v9Dots">
+<button aria-label="Section 1" class="active" data-v9-dot="0" type="button"></button><button aria-label="Section 2" class="" data-v9-dot="1" type="button"></button><button aria-label="Section 3" class="" data-v9-dot="2" type="button"></button><button aria-label="Section 4" class="" data-v9-dot="3" type="button"></button><button aria-label="Section 5" class="" data-v9-dot="4" type="button"></button><button aria-label="Section 6" class="" data-v9-dot="5" type="button"></button><button aria-label="Section 7" class="" data-v9-dot="6" type="button"></button><button aria-label="Section 8" class="" data-v9-dot="7" type="button"></button>
+</div>
+<button id="v9Next" type="button">NEXT →</button>
+</div>
+</div>
+</div>
+</div>
+<div class="v9-preview-cta">
+<a class="cta js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE COMPLETE REPORT — $17 →</a>
+<span>Instant digital access · No subscription</span>
+</div>
+</div>
+</section>
+<section class="bs garbage-section-v4">
+<div class="surgical-wrap garbage-grid">
+<div class="garbage-head">
+<div class="eyebrow red">EVIDENCE 07 · THE GARBAGE FILTER</div>
+<h2>STOP BUYING AI.<br/><span>START BUYING RESULTS.</span></h2>
+<p class="garbage-lede">The next shiny AI tool is not a strategy. Fear of missing out is not a business case.</p>
+</div>
+<div class="garbage-points">
+<div><b>01</b><h3>DON'T BUY TECHNOLOGY BECAUSE OF FOMO.</h3><p>Buy it because you can clearly define the business problem it solves.</p></div>
+<div><b>02</b><h3>START WITH YOUR BUSINESS — NOT THE TOOL.</h3><p>Where are you losing customers, time or money? What are you actually trying to improve?</p></div>
+<div><b>03</b><h3>IF YOU CAN'T MEASURE IT, DON'T THROW MONEY AT IT.</h3><p>Define the result first. Then decide whether AI belongs in the solution.</p></div>
+<div><b>04</b><h3>ONE USEFUL SOLUTION BEATS TEN SHINY TOOLS.</h3><p>The goal isn't to become an “AI company.” The goal is to run a better business.</p></div>
+<div><b>05</b><h3>SOME AI CLAIMS ARE GARBAGE.</h3><p>Some of the opportunity is very real. The important part is knowing the difference.</p></div>
+</div>
+<div class="garbage-close">
+<p>That's why we created <strong>The Real AI Truth Report.</strong> Not to scare you into buying AI. Not to convince you that you need everything.</p>
+<h3>Slow down. Stop the noise. Get the facts. Measure what matters.</h3>
+<p>Understand your goals first, then build something that can be measured and can truly drive results.</p>
+<a class="surgical-cta redbtn js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE NO GARBAGE REAL AI TRUTH REPORT — $17 →</a>
+</div>
+</div></section>
+<section class="risk-section-v4">
+<div class="wrap">
+<div class="kicker">What if I do nothing?</div>
+<h2>THIS IS THE RISK.<br/><span class="red">NOT ROBOTS REPLACING PLUMBERS.</span></h2>
+<p class="lead">The real risk is much less dramatic — which is exactly why it's easy to miss.</p>
+<div class="scenario-grid">
+<div class="scenario">
+<div class="who">Customer A · The old path</div>
+<h3>She searches Google.</h3>
+<div class="path"><div>Needs a contractor</div><div>Searches / compares</div><div>Sees multiple businesses</div><div>You may compete for the job</div></div>
+</div>
+<div class="scenario bad">
+<div class="who">Customer B · The new path</div>
+<h3>She asks AI.</h3>
+<div class="path"><div>Needs a contractor</div><div>Asks who she should hire</div><div>AI gives her names</div><div>YOUR NAME ISN'T THERE.</div></div>
+</div>
+</div>
+<div class="risk">YOU DIDN'T LOSE THE SALE. <span>YOU NEVER ENTERED IT.</span></div>
+<div class="center" style="margin-top:30px"><a class="cta big js-open-checkout" data-checkout-modal="true" href="#checkout">UNDERSTAND THE SHIFT — $17 →</a></div>
+</div>
+</section>
+<section class="audio audio-section-v4 audio-photo-fix v15-audio-fixed">
+<div class="wrap">
+<div class="audio-card">
+<div class="audio-photo"><img alt="Rob Pickering reviewing a business consultation at his desk" class="v15-consult-photo" src="assets/asset-06.png"/><div class="tag"><b>Contractor Business Consult</b><span>Included inside the report</span></div></div>
+<div class="audio-copy">
+<div class="kicker">Read it. Then hear it applied.</div>
+<h2>LISTEN IN ON A <span class="red">CONTRACTOR BUSINESS CONSULT.</span></h2>
+<p class="lead">The report includes an approximately 20-minute contractor business consult so you can hear these ideas applied to an actual business scenario — what matters, what doesn't and what the next decision should be.</p>
+<div class="player"><button aria-label="Play 30 second preview" class="play" id="play" type="button">▶</button><div class="track"><span id="progress"></span></div><div class="small">30-sec preview</div></div>
+<div class="small">Full consult audio included with your $17 report.</div>
+<div style="margin-top:23px"><a class="cta js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE REPORT + AUDIO — $17 →</a></div>
+</div>
+</div>
+<audio id="previewAudio" preload="metadata" src="assets/asset-07.mp3"></audio>
+</div>
+</section>
+<section class="decision decision-section-v4">
+<div class="surgical-wrap decision-grid">
+<div class="decision-product">
+<div class="v15-product-stage">
+<div class="v15-report-cover">
+<img alt="The No Garbage Real AI Truth Report digital report" src="assets/asset-05.jpg"/>
+<div class="v15-cover-label">
+<small>THE NO GARBAGE</small>
+<strong>REAL AI TRUTH REPORT</strong>
+</div>
+</div>
+<div class="v15-price-card">
+<span>ONE-TIME PAYMENT</span>
+<strong>$17</strong>
+<b>INSTANT DIGITAL ACCESS</b>
+<small>NO SUBSCRIPTION</small>
+</div>
+</div>
+</div>
+<div class="decision-copy">
+<div class="eyebrow">BEFORE YOU CLOSE THIS PAGE</div>
+<h2>THREE DECISIONS THAT COULD CHANGE WHAT YOU DO NEXT.</h2>
+<div class="decision-list">
+<div><b>01</b><p><strong>Know what's actually changing.</strong><br/>Separate real AI business changes from the noise, hype and fear.</p></div>
+<div><b>02</b><p><strong>See where your business may be exposed.</strong><br/>Understand how search, missed calls, referrals and AI recommendations are changing how contractors get chosen.</p></div>
+<div><b>03</b><p><strong>Know what to do next.</strong><br/>Make practical, measurable decisions instead of wondering whether you're already behind.</p></div>
+</div>
+<div class="availability-note">GET ACCESS WHILE THIS EDITION IS STILL AVAILABLE.</div>
+<a class="surgical-cta redbtn big js-open-checkout" data-checkout-modal="true" href="#checkout">GET INSTANT DIGITAL ACCESS — $17 →</a>
+<div class="microtrust">ONE-TIME PAYMENT · NO SUBSCRIPTION · READ ON PHONE, TABLET OR DESKTOP</div>
+</div>
+</div></section>
+<section class="v12-sales-section">
+<div class="wrap">
+<div class="v12-sales-kicker">THE NO GARBAGE REAL AI TRUTH REPORT</div>
+<div class="v12-sales-grid">
+<div class="v12-sales-copy">
+<h2>REAL DATA. REAL INSIGHTS.<br/><span>A CLEARER PATH FORWARD.</span></h2>
+<p class="v12-sales-lede">The Real AI Truth Report gives you the facts, the context and the practical next steps so you can stop guessing and make smarter decisions for your business.</p>
+<div class="v12-value-list">
+<div class="v12-value"><div class="v12-icon">▣</div><div><strong>Eight In-Depth Sections</strong><span>A complete, easy-to-read investigation.</span></div></div>
+<div class="v12-value"><div class="v12-icon">▤</div><div><strong>Real Sources &amp; Evidence</strong><span>No opinions. No hype. Just what the data actually shows.</span></div></div>
+<div class="v12-value"><div class="v12-icon">⌕</div><div><strong>Contractor-Focused Insights</strong><span>See what's changing, what it means, and what to do about it.</span></div></div>
+<div class="v12-value"><div class="v12-icon">▦</div><div><strong>Interactive Tools</strong><span>A simple calculator to see the potential impact on your business.</span></div></div>
+<div class="v12-value"><div class="v12-icon">◉</div><div><strong>Contractor Consult Audio</strong><span>Listen to the included contractor-focused consultation.</span></div></div>
+<div class="v12-value"><div class="v12-icon">↯</div><div><strong>Instant Access</strong><span>Read it now on your phone, tablet or desktop. No subscription.</span></div></div>
+</div>
+<a class="cta v12-sales-cta js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE FULL INVESTIGATION — $17 →</a>
+</div>
+<div class="v12-product-column">
+<div class="v12-price-seal"><span>ONLY</span><strong>$17</strong><em>INSTANT ACCESS</em></div>
+<div class="v12-report-product">
+<div class="v12-report-shadow"></div>
+<img alt="AI Just Took Another Customer — The Real AI Truth Report" class="v11-clean-cover" src="assets/asset-05.jpg"/>
+<div class="v12-report-pages"></div>
+</div>
+</div>
+</div>
+<div class="v12-trust-strip">
+<div><b>↓</b><span>Instant Access</span></div>
+<div><b>▯</b><span>Read Anywhere</span></div>
+<div><b>◇</b><span>Secure Checkout</span></div>
+<div><b>▭</b><span>One-Time Payment</span></div>
+<div><b>⊘</b><span>No Subscription</span></div>
+</div>
+</div>
+</section>
+<section class="faq-section-v4">
+<div class="copy faq">
+<div class="kicker">Before you buy</div>
+<h2>QUESTIONS?</h2>
+<details><summary>Is this another AI sales pitch?</summary><p>No. The report includes negative evidence, failed projects and claims that did not hold up. Its purpose is to separate real business risk from AI hype.</p></details>
+<details><summary>Is this only for contractors?</summary><p>Contractors are the primary audience, but the core issue — how customers discover and choose local businesses — applies to many service businesses.</p></details>
+<details><summary>Do I need to understand AI?</summary><p>No. It is written for business owners, not developers.</p></details>
+<details><summary>How long does the report take?</summary><p>The main report is designed to be read in roughly 25 minutes. The contractor consult audio is approximately 20 minutes.</p></details>
+<details><summary>Are the statistics sourced?</summary><p>Yes. Source-backed claims are identified throughout the report, and questionable claims are challenged rather than quietly repeated.</p></details>
+<details><summary>Is there a subscription?</summary><p>No. It is a one-time $17 purchase.</p></details>
+<details><summary>What happens after I pay?</summary><p>You receive access to the digital report so you can begin reading immediately on your phone, tablet or computer.</p></details>
+<div class="center" style="margin-top:30px"><a class="cta big black js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE REPORT — $17 →</a></div>
+</div>
+</section>
+<footer>The No GARBAGE AI Truth Report · ThirdShift Technologies</footer>
+<div class="mobile-buy"><a class="cta js-open-checkout" data-checkout-modal="true" href="#checkout">GET THE REPORT — $17 →</a></div>
+<script>
+(function(){
+ const a=document.getElementById('previewAudio'), p=document.getElementById('play'), bar=document.getElementById('progress');
+ if(!a||!p)return;
+ p.addEventListener('click',()=>{if(a.paused){a.currentTime=0;a.play();p.textContent='❚❚'}else{a.pause();p.textContent='▶'}});
+ a.addEventListener('timeupdate',()=>{const pct=Math.min(100,(a.currentTime/30)*100);if(bar)bar.style.width=pct+'%';if(a.currentTime>=30){a.pause();a.currentTime=0;p.textContent='▶';if(bar)bar.style.width='0%'}});
+})();
+</script>
+<script id="v9-preview-js">
+(function(){
+ const sections=[{"num": "01", "title": "This has happened before."}, {"num": "02", "title": "AI adoption already came."}, {"num": "03", "title": "The way people find a contractor changed."}, {"num": "04", "title": "A new competitor is coming."}, {"num": "05", "title": "\u201cWord of mouth\u201d isn't a strategy."}, {"num": "06", "title": "The math on missed calls."}, {"num": "07", "title": "The chapter every AI salesman hopes you skip."}, {"num": "08", "title": "What you actually do next."}];
+ const overviews=[{"eyebrow": "THE PLATFORM-SHIFT PATTERN", "overview": "A look at the major changes that have reshaped how local customers find businesses \u2014 and why AI belongs in that same conversation.", "importance": "It gives contractors historical context before asking them to make any decision about AI.", "takeaway": "Understand the pattern first. Then decide what deserves action."}, {"eyebrow": "WHAT ADOPTION REALLY LOOKS LIKE", "overview": "An evidence-based look at how quickly consumers and small businesses are actually using AI, separated from futuristic predictions and hype.", "importance": "You can judge the size of the shift using real adoption signals instead of sales pitches.", "takeaway": "Know what is already happening versus what is merely being predicted."}, {"eyebrow": "THE CUSTOMER-DISCOVERY SHIFT", "overview": "How the path from a customer question to a local-business recommendation is changing as AI answers become part of search and discovery.", "importance": "A contractor can lose consideration before a call, form fill, or website visit ever happens.", "takeaway": "Understand where visibility now begins."}, {"eyebrow": "THE NEW COMPETITIVE PLAYBOOK", "overview": "A look at why newer, AI-native operators may build their sales, service and marketing systems differently from established local businesses.", "importance": "The threat is not AI itself. It is a competitor using better systems while you rely only on old habits.", "takeaway": "See where operational habits can become a competitive disadvantage."}, {"eyebrow": "TRUST, REFERRALS & WORD OF MOUTH", "overview": "Why reputation still matters enormously \u2014 but the way that reputation gets discovered, interpreted and transferred is changing.", "importance": "Strong word of mouth is more valuable when digital systems can actually see and validate it.", "takeaway": "Protect the trust you've earned by making it visible."}, {"eyebrow": "THE REAL MATH ON MISSED OPPORTUNITY", "overview": "A practical framework for thinking about missed calls and lost opportunities using your own close rate, ticket size and business economics.", "importance": "It replaces generic scare-math with numbers a contractor can actually evaluate.", "takeaway": "Measure the opportunity with your numbers, not somebody else's."}, {"eyebrow": "THE GARBAGE FILTER", "overview": "A deliberate look at AI failures, overpromises and claims that do not survive scrutiny \u2014 the side of the story AI sellers often skip.", "importance": "The report is not asking you to believe every AI claim just because the underlying shift is real.", "takeaway": "Separate a real opportunity from bad technology and bad advice."}, {"eyebrow": "WHAT YOU ACTUALLY DO NEXT", "overview": "The report closes by turning the investigation into practical next steps rather than recommending a giant AI transformation project.", "importance": "You finish with a clearer way to prioritize what matters now, what can wait and where AI may actually help.", "takeaway": "Leave with a decision framework, not another pile of AI ideas."}];
+ let current=0;
+ const modal=document.getElementById('v9Modal');
+ const chips=[...document.querySelectorAll('.v9-chip')];
+ const dots=[...document.querySelectorAll('[data-v9-dot]')];
+
+ function setSection(i){
+   current=(i+sections.length)%sections.length;
+   const s=sections[current], o=overviews[current];
+   chips.forEach((x,j)=>x.classList.toggle('active',j===current));
+   dots.forEach((x,j)=>x.classList.toggle('active',j===current));
+   document.getElementById('v9InlineNum').textContent=s.num;
+   document.getElementById('v9InlineEyebrow').textContent=o.eyebrow;
+   document.getElementById('v9InlineTitle').textContent=s.title;
+   document.getElementById('v9InlineOverview').textContent=o.overview;
+   document.getElementById('v9ModalNum').textContent=s.num;
+   document.getElementById('v9ModalEyebrow').textContent=o.eyebrow;
+   document.getElementById('v9ModalTitle').textContent=s.title;
+   document.getElementById('v9ModalOverview').textContent=o.overview;
+   document.getElementById('v9ModalImportance').textContent=o.importance;
+   document.getElementById('v9ModalTakeaway').textContent=o.takeaway;
+ }
+ function openModal(i=current){
+   setSection(i); modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+   document.body.style.overflow='hidden';
+ }
+ function closeModal(){
+   modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+   document.body.style.overflow='';
+ }
+ chips.forEach((b,i)=>b.addEventListener('click',()=>{setSection(i); openModal(i);}));
+ dots.forEach((b,i)=>b.addEventListener('click',()=>setSection(i)));
+ document.getElementById('v9OpenModal')?.addEventListener('click',()=>openModal());
+ document.getElementById('v9Prev')?.addEventListener('click',()=>setSection(current-1));
+ document.getElementById('v9Next')?.addEventListener('click',()=>setSection(current+1));
+ document.querySelectorAll('[data-v9-close]').forEach(x=>x.addEventListener('click',closeModal));
+ document.addEventListener('keydown',e=>{
+   if(!modal.classList.contains('open')) return;
+   if(e.key==='Escape') closeModal();
+   if(e.key==='ArrowRight') setSection(current+1);
+   if(e.key==='ArrowLeft') setSection(current-1);
+ });
+ let touchX=null;
+ modal?.addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});
+ modal?.addEventListener('touchend',e=>{
+   if(touchX===null) return;
+   const dx=e.changedTouches[0].clientX-touchX;
+   if(Math.abs(dx)>55) setSection(current+(dx<0?1:-1));
+   touchX=null;
+ },{passive:true});
+ setSection(0);
+})();
+</script>
+<script id="v11-preview-enhancement">(function(){document.querySelectorAll('.v11-card-open').forEach(function(b){b.addEventListener('click',function(){var i=Number(b.dataset.v11Index||0);var chips=document.querySelectorAll('.v9-chip');if(chips[i]) chips[i].click();else {var m=document.getElementById('v9Modal');if(m){m.classList.add('open');m.setAttribute('aria-hidden','false');}}});});})();</script>
+<script id="v14-phone-demo-script">
+(function(){
+  const demo=document.querySelector('.v14-phone-demo');
+  if(!demo) return;
+  const btn=demo.querySelector('.demo-toggle');
+  let timer=null;
+  function setState(answer){
+    demo.classList.toggle('show-answer',answer);
+    if(btn) btn.textContent=answer?'SHOW THE QUESTION ←':'SHOW THE ANSWER →';
+    const a=demo.querySelector('.answer-state');
+    if(a) a.setAttribute('aria-hidden',answer?'false':'true');
+  }
+  function cycle(){
+    clearTimeout(timer);
+    setState(false);
+    timer=setTimeout(function(){
+      setState(true);
+      timer=setTimeout(cycle,6500);
+    },3200);
+  }
+  if(btn){
+    btn.addEventListener('click',function(){
+      clearTimeout(timer);
+      setState(!demo.classList.contains('show-answer'));
+    });
+  }
+  cycle();
+})();
+</script>
+
+
+
+<div aria-hidden="true" class="v19-modal-shell" id="checkoutModal">
+<div class="v19-backdrop" data-close-modal=""></div>
+<div aria-label="Get the Real AI Truth Report" aria-modal="true" class="v19-modal-card" role="dialog">
+<img alt="The No Garbage Real AI Truth Report checkout" class="v19-modal-art" src="assets/asset-08.jpg"/>
+<button aria-label="Close" class="v19-close-hotspot" data-close-modal="" type="button"></button>
+<form aria-label="Checkout contact information" class="v19-form-overlay" id="v19LeadForm">
+<input aria-label="First Name" autocomplete="given-name" class="v19-first" name="first_name"/>
+<input aria-label="Last Name" autocomplete="family-name" class="v19-last" name="last_name"/>
+<input aria-label="Email Address" autocomplete="email" class="v19-email" name="email" required="" type="email"/>
+<input aria-label="Mobile Number" autocomplete="tel" class="v19-phone" name="phone" type="tel"/>
+<input aria-label="SMS consent" class="v19-consent" name="sms_consent" type="checkbox" value="yes"/>
+<button aria-label="Continue to secure Stripe checkout" class="v19-stripe-hotspot" type="submit"></button>
+</form>
+</div>
+</div>
+
+<script id="v19-locked-modal-script">
+(function(){
+ const modal=document.getElementById('checkoutModal');
+ const form=document.getElementById('v19LeadForm');
+ if(!modal||!form) return;
+ const STRIPE_URL='https://buy.stripe.com/3cI28r2Zs4wH66E5il9Zm0e';
+
+ function openModal(e){
+   if(e) e.preventDefault();
+   modal.classList.add('open');
+   modal.setAttribute('aria-hidden','false');
+   document.body.classList.add('v19-modal-open');
+ }
+ function closeModal(){
+   modal.classList.remove('open');
+   modal.setAttribute('aria-hidden','true');
+   document.body.classList.remove('v19-modal-open');
+ }
+ document.querySelectorAll('.js-open-checkout').forEach(el=>el.addEventListener('click',openModal));
+ modal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeModal));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+
+ form.addEventListener('submit',function(e){
+   e.preventDefault();
+   if(!form.reportValidity()) return;
+   const fd=new FormData(form);
+   const lead={
+     first_name:fd.get('first_name')||'',
+     last_name:fd.get('last_name')||'',
+     email:fd.get('email')||'',
+     phone:fd.get('phone')||'',
+     sms_consent:fd.get('sms_consent')==='yes',
+     consent_version:'v19-2026-09-11',
+     captured_at:new Date().toISOString()
+   };
+   try{sessionStorage.setItem('real_ai_truth_checkout_lead',JSON.stringify(lead));}catch(err){}
+   window.location.assign(STRIPE_URL);
+ });
+})();
+</script>
+</body>
+</html>
