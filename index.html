@@ -1780,6 +1780,7 @@ p{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Ar
 .v19-form-overlay input:not([type=checkbox])::placeholder{color:#98a0a8;opacity:1}
 .v19-form-overlay input:not([type=checkbox]):focus{box-shadow:0 0 0 3px rgba(30,115,210,.18);border-radius:8px}
 .v19-stripe-hotspot,.v19-consent{cursor:pointer}
+.v19-terms-hotspot,.v19-privacy-hotspot{position:absolute;pointer-events:auto;background:transparent;border:0;outline:0;cursor:pointer}
 /* full visible field box (label text above + value line) - click target only */
 .v19-first-hit{left:57.1%;top:33.1%;width:18.6%;height:8.4%}
 .v19-last-hit{left:77.0%;top:33.1%;width:18.4%;height:8.4%}
@@ -1791,6 +1792,8 @@ p{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Ar
 .v19-email{left:57.1%;top:46.9%;width:38.3%;height:3.7%}
 .v19-phone{left:57.1%;top:56.3%;width:38.3%;height:3.6%}
 .v19-consent{left:57.0%;top:63.5%;width:2.2%;height:3.2%;opacity:.01;cursor:pointer}
+.v19-terms-hotspot{left:58.58%;top:76.73%;width:11.21%;height:2.66%}
+.v19-privacy-hotspot{left:71.49%;top:76.73%;width:8.09%;height:2.66%}
 .v19-stripe-hotspot{left:57.0%;top:82.3%;width:38.5%;height:8.6%;cursor:pointer}
 body.v19-modal-open{overflow:hidden}
 @media(max-width:700px){
@@ -2303,6 +2306,8 @@ Every day, they're asking AI who to call.</p>
 <label class="v19-phone-hit" for="v19PhoneInput"></label>
 <input aria-label="Mobile Number" autocomplete="tel" class="v19-phone" id="v19PhoneInput" name="phone" placeholder="(248) 555-0123" type="tel"/>
 <input aria-label="SMS consent" class="v19-consent" name="sms_consent" type="checkbox" value="yes"/>
+<a aria-label="Terms & Conditions" class="v19-terms-hotspot" href="https://qrbuddy.ai/terms_of_use.pdf" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="Privacy Policy" class="v19-privacy-hotspot" href="https://qrbuddy.ai/privacy_policy.pdf" rel="noopener noreferrer" target="_blank"></a>
 <button aria-label="Continue to secure Stripe checkout" class="v19-stripe-hotspot" type="submit"></button>
 </form>
 </div>
