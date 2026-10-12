@@ -1,0 +1,6 @@
+# 2026-10-12 (Rob): realaitruth.com forwards to getaiautomated.com so there is
+# one website. The original page is kept, unchanged, at /original-design/
+# (and in the git tag original-design-2026-10-12 / branch original-design).
+# 302 = temporary, so browsers don't remember it. To undo: delete this file.
+/original-design/*  /original-design/:splat  200
+/*                  https://getaiautomated.com/  302!
